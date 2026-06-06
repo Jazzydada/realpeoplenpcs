@@ -1,17 +1,17 @@
 <svg viewBox="0 0 200 270" xmlns="http://www.w3.org/2000/svg">
 <defs>
   <radialGradient id="bg" cx="53%" cy="30%" r="75%">
-    <stop offset="0%" stop-color="#140820"/>
+    <stop offset="0%" stop-color="#200a38"/>
     <stop offset="45%" stop-color="#0a0412"/>
     <stop offset="100%" stop-color="#040208"/>
   </radialGradient>
   <radialGradient id="atm" cx="53%" cy="32%" r="36%">
-    <stop offset="0%" stop-color="#a060d8" stop-opacity="0.14"/>
+    <stop offset="0%" stop-color="#a060d8" stop-opacity="0.35"/>
     <stop offset="100%" stop-color="#a060d8" stop-opacity="0"/>
   </radialGradient>
   <radialGradient id="vig" cx="50%" cy="42%" r="62%">
     <stop offset="40%" stop-color="transparent"/>
-    <stop offset="100%" stop-color="#020108" stop-opacity="0.90"/>
+    <stop offset="100%" stop-color="#020108" stop-opacity="0.55"/>
   </radialGradient>
 </defs>
 <rect width="200" height="270" fill="url(#bg)"/>
@@ -29,26 +29,26 @@
 <line x1="73" y1="48" x2="69" y2="44" stroke="#a060d8" stroke-width="1.2" stroke-opacity="0.42"/>
 <path d="M107 76 L111 82 L107 88 L103 82 Z" fill="none" stroke="#a060d8" stroke-width="0.7" stroke-opacity="0.26"/>
 <!-- white/silver hair -->
-<path d="M102 32 C88 26 72 30 64 42 C56 54 54 70 56 88 C58 106 64 120 68 132 C62 128 54 114 50 96 C46 76 48 56 58 40 C68 24 88 20 100 26 Z" fill="#14082a"/>
+<path d="M102 32 C88 26 72 30 64 42 C56 54 54 70 56 88 C58 106 64 120 68 132 C62 128 54 114 50 96 C46 76 48 56 58 40 C68 24 88 20 100 26 Z" fill="#060214"/>
 <path d="M74 36 C76 52 76 70 74 86" fill="none" stroke="#c8c0e0" stroke-width="0.9" stroke-opacity="0.28"/>
 <path d="M68 38 C70 54 70 70 68 84" fill="none" stroke="#c8c0e0" stroke-width="0.6" stroke-opacity="0.22"/>
 <!-- head (slender drow) -->
-<path d="M102 32 C90 32 80 38 76 48 C72 58 72 70 76 80 C78 88 82 94 87 98 C90 102 94 104 98 104 C102 104 106 102 110 97 C114 90 115 80 113 68 C110 54 108 42 102 32 Z" fill="#0e0620"/>
+<path d="M102 32 C90 32 80 38 76 48 C72 58 72 70 76 80 C78 88 82 94 87 98 C90 102 94 104 98 104 C102 104 106 102 110 97 C114 90 115 80 113 68 C110 54 108 42 102 32 Z" fill="#060214"/>
 <!-- POINTED EAR -->
-<path d="M110 52 C116 46 124 38 130 30 C126 38 120 48 118 56 C120 60 118 66 114 68 C111 64 110 56 110 52 Z" fill="#0e0620"/>
+<path d="M110 52 C116 46 124 38 130 30 C126 38 120 48 118 56 C120 60 118 66 114 68 C111 64 110 56 110 52 Z" fill="#060214"/>
 <!-- nose -->
-<path d="M76 58 C73 63 71 68 73 73 C75 76 77 74 77 70" fill="#0e0620"/>
+<path d="M76 58 C73 63 71 68 73 73 C75 76 77 74 77 70" fill="#060214"/>
 <!-- glowing eye hint -->
 <ellipse cx="88" cy="70" rx="3.5" ry="2" fill="#d060a0" fill-opacity="0.18"/>
 <!-- neck -->
-<path d="M87 104 C85 112 85 122 88 128 C90 132 94 134 98 134 C102 134 106 132 108 128 C110 122 110 112 108 104 C104 102 100 102 98 102 C93 102 89 102 87 104 Z" fill="#0c0418"/>
+<path d="M87 104 C85 112 85 122 88 128 C90 132 94 134 98 134 C102 134 106 132 108 128 C110 122 110 112 108 104 C104 102 100 102 98 102 C93 102 89 102 87 104 Z" fill="#060214"/>
 <!-- shoulders -->
-<path d="M40 232 C38 196 52 170 76 156 C84 152 90 150 98 148 C108 150 120 154 130 160 C154 174 162 196 162 232 Z" fill="#0c0418"/>
-<path d="M38 256 L40 232 L162 232 L164 256 Z" fill="#0a0314"/>
+<path d="M40 232 C38 196 52 170 76 156 C84 152 90 150 98 148 C108 150 120 154 130 160 C154 174 162 196 162 232 Z" fill="#060214"/>
+<path d="M38 256 L40 232 L162 232 L164 256 Z" fill="#060214"/>
 <!-- rim light -->
 <path d="M76 48 C72 58 72 70 76 80 C78 88 82 94 87 98" fill="none" stroke="#a060d8" stroke-width="0.8" stroke-opacity="0.24"/>
 <path d="M40 232 C38 196 52 170 76 156" fill="none" stroke="#a060d8" stroke-width="0.5" stroke-opacity="0.15"/>
-<ellipse cx="100" cy="248" rx="88" ry="18" fill="#020108" fill-opacity="0.70"/>
+<ellipse cx="100" cy="248" rx="88" ry="18" fill="#060214" fill-opacity="0.70"/>
 <rect x="7" y="7" width="186" height="256" fill="none" stroke="#a060d8" stroke-width="2" stroke-opacity="0.07"/>
 <rect x="9" y="9" width="182" height="252" fill="none" stroke="#a060d8" stroke-width="1.1" stroke-opacity="0.38"/>
 <rect x="13" y="13" width="174" height="244" fill="none" stroke="#a060d8" stroke-width="0.4" stroke-opacity="0.15"/>

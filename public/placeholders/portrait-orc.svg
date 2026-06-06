@@ -1,8 +1,8 @@
 <svg viewBox="0 0 200 270" xmlns="http://www.w3.org/2000/svg">
 <defs>
-  <radialGradient id="bg" cx="53%" cy="28%" r="75%"><stop offset="0%" stop-color="#0c1008"/><stop offset="45%" stop-color="#060a04"/><stop offset="100%" stop-color="#030502"/></radialGradient>
-  <radialGradient id="atm" cx="53%" cy="30%" r="36%"><stop offset="0%" stop-color="#c04030" stop-opacity="0.13"/><stop offset="100%" stop-color="#c04030" stop-opacity="0"/></radialGradient>
-  <radialGradient id="vig" cx="50%" cy="42%" r="62%"><stop offset="40%" stop-color="transparent"/><stop offset="100%" stop-color="#030201" stop-opacity="0.88"/></radialGradient>
+  <radialGradient id="bg" cx="53%" cy="28%" r="75%"><stop offset="0%" stop-color="#182408"/><stop offset="45%" stop-color="#060a04"/><stop offset="100%" stop-color="#030502"/></radialGradient>
+  <radialGradient id="atm" cx="53%" cy="30%" r="36%"><stop offset="0%" stop-color="#c04030" stop-opacity="0.35"/><stop offset="100%" stop-color="#c04030" stop-opacity="0"/></radialGradient>
+  <radialGradient id="vig" cx="50%" cy="42%" r="62%"><stop offset="40%" stop-color="transparent"/><stop offset="100%" stop-color="#030201" stop-opacity="0.55"/></radialGradient>
 </defs>
 <rect width="200" height="270" fill="url(#bg)"/>
 <rect width="200" height="270" fill="url(#atm)"/>
@@ -18,26 +18,26 @@
 <line x1="59" y1="80" x2="53" y2="80" stroke="#c04030" stroke-width="1.2" stroke-opacity="0.40"/>
 <line x1="73" y1="46" x2="69" y2="42" stroke="#c04030" stroke-width="1.2" stroke-opacity="0.40"/>
 <path d="M107 74 L111 80 L107 86 L103 80 Z" fill="none" stroke="#c04030" stroke-width="0.7" stroke-opacity="0.24"/>
-<path d="M96 34 C86 32 76 36 70 44 C66 50 66 58 68 66 C72 52 80 42 96 38 Z" fill="#0a0e08"/>
-<path d="M104 34 C114 32 124 36 130 44 C134 50 134 58 132 66 C128 52 120 42 104 38 Z" fill="#0a0e08"/>
+<path d="M96 34 C86 32 76 36 70 44 C66 50 66 58 68 66 C72 52 80 42 96 38 Z" fill="#040602"/>
+<path d="M104 34 C114 32 124 36 130 44 C134 50 134 58 132 66 C128 52 120 42 104 38 Z" fill="#040602"/>
 <!-- head (heavy, orc) -->
-<path d="M96 34 C84 34 74 40 70 50 C66 62 66 74 70 84 C72 90 76 96 80 100 C84 104 88 108 94 110 C100 112 106 110 110 106 C114 100 116 92 116 82 C116 70 114 56 108 44 C104 38 100 34 96 34 Z" fill="#0c1008"/>
+<path d="M96 34 C84 34 74 40 70 50 C66 62 66 74 70 84 C72 90 76 96 80 100 C84 104 88 108 94 110 C100 112 106 110 110 106 C114 100 116 92 116 82 C116 70 114 56 108 44 C104 38 100 34 96 34 Z" fill="#040602"/>
 <!-- heavy brow ridge -->
-<path d="M70 54 C72 48 80 44 90 44 C98 44 106 46 112 52 C106 50 98 48 90 48 C82 48 74 52 70 54 Z" fill="#0a0e06"/>
-<path d="M72 66 C70 70 70 74 72 78 C74 80 78 78 78 74" fill="#0c1008"/>
+<path d="M70 54 C72 48 80 44 90 44 C98 44 106 46 112 52 C106 50 98 48 90 48 C82 48 74 52 70 54 Z" fill="#040602"/>
+<path d="M72 66 C70 70 70 74 72 78 C74 80 78 78 78 74" fill="#040602"/>
 <!-- orcish pointed ear -->
-<path d="M112 56 C118 50 124 44 128 38 C124 44 120 52 118 60 C120 64 118 68 114 70 C112 66 112 60 112 56 Z" fill="#0c1008"/>
+<path d="M112 56 C118 50 124 44 128 38 C124 44 120 52 118 60 C120 64 118 68 114 70 C112 66 112 60 112 56 Z" fill="#040602"/>
 <!-- lower jaw protrudes -->
-<path d="M72 98 C70 104 72 110 76 114 C80 118 86 118 92 116 C98 114 104 112 108 108 C112 104 114 98 114 94 C108 106 100 110 92 110 C84 110 76 106 72 98 Z" fill="#0c1008"/>
+<path d="M72 98 C70 104 72 110 76 114 C80 118 86 118 92 116 C98 114 104 112 108 108 C112 104 114 98 114 94 C108 106 100 110 92 110 C84 110 76 106 72 98 Z" fill="#040602"/>
 <!-- TUSKS -->
 <path d="M78 114 C76 122 74 130 76 136 C78 140 82 140 82 136 C80 130 80 122 80 116 Z" fill="#ccc8b0" fill-opacity="0.72"/>
 <path d="M104 112 C106 120 108 128 108 134 C108 138 112 138 112 134 C110 128 108 118 106 114 Z" fill="#ccc8b0" fill-opacity="0.72"/>
-<path d="M78 108 C76 116 76 124 78 130 C80 134 86 136 92 136 C98 136 104 134 106 130 C108 124 108 116 106 108 C102 106 98 106 92 106 C86 106 82 106 78 108 Z" fill="#0a0e06"/>
-<path d="M30 232 C28 194 44 166 68 152 C76 148 84 146 92 144 C102 146 116 150 128 156 C154 170 166 196 164 232 Z" fill="#0a0e06"/>
-<path d="M28 256 L30 232 L164 232 L166 256 Z" fill="#080c05"/>
+<path d="M78 108 C76 116 76 124 78 130 C80 134 86 136 92 136 C98 136 104 134 106 130 C108 124 108 116 106 108 C102 106 98 106 92 106 C86 106 82 106 78 108 Z" fill="#040602"/>
+<path d="M30 232 C28 194 44 166 68 152 C76 148 84 146 92 144 C102 146 116 150 128 156 C154 170 166 196 164 232 Z" fill="#040602"/>
+<path d="M28 256 L30 232 L164 232 L166 256 Z" fill="#040602"/>
 <path d="M70 50 C66 62 66 74 70 84 C72 90 76 96 80 100" fill="none" stroke="#c04030" stroke-width="0.8" stroke-opacity="0.20"/>
 <path d="M30 232 C28 194 44 166 68 152" fill="none" stroke="#c04030" stroke-width="0.5" stroke-opacity="0.14"/>
-<ellipse cx="100" cy="248" rx="88" ry="18" fill="#030201" fill-opacity="0.70"/>
+<ellipse cx="100" cy="248" rx="88" ry="18" fill="#040602" fill-opacity="0.70"/>
 <rect x="7" y="7" width="186" height="256" fill="none" stroke="#c04030" stroke-width="2" stroke-opacity="0.07"/>
 <rect x="9" y="9" width="182" height="252" fill="none" stroke="#c04030" stroke-width="1.1" stroke-opacity="0.38"/>
 <rect x="13" y="13" width="174" height="244" fill="none" stroke="#c04030" stroke-width="0.4" stroke-opacity="0.15"/>

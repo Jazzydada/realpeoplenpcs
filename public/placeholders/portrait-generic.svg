@@ -1,8 +1,8 @@
 <svg viewBox="0 0 200 270" xmlns="http://www.w3.org/2000/svg">
 <defs>
-  <radialGradient id="bg" cx="53%" cy="28%" r="75%"><stop offset="0%" stop-color="#160e06"/><stop offset="45%" stop-color="#0a0804"/><stop offset="100%" stop-color="#050402"/></radialGradient>
-  <radialGradient id="atm" cx="53%" cy="30%" r="36%"><stop offset="0%" stop-color="#c89828" stop-opacity="0.10"/><stop offset="100%" stop-color="#c89828" stop-opacity="0"/></radialGradient>
-  <radialGradient id="vig" cx="50%" cy="42%" r="62%"><stop offset="40%" stop-color="transparent"/><stop offset="100%" stop-color="#030201" stop-opacity="0.90"/></radialGradient>
+  <radialGradient id="bg" cx="53%" cy="28%" r="75%"><stop offset="0%" stop-color="#1e1208"/><stop offset="45%" stop-color="#0a0804"/><stop offset="100%" stop-color="#050402"/></radialGradient>
+  <radialGradient id="atm" cx="53%" cy="30%" r="36%"><stop offset="0%" stop-color="#c89828" stop-opacity="0.35"/><stop offset="100%" stop-color="#c89828" stop-opacity="0"/></radialGradient>
+  <radialGradient id="vig" cx="50%" cy="42%" r="62%"><stop offset="40%" stop-color="transparent"/><stop offset="100%" stop-color="#030201" stop-opacity="0.55"/></radialGradient>
 </defs>
 <rect width="200" height="270" fill="url(#bg)"/>
 <rect width="200" height="270" fill="url(#atm)"/>
@@ -19,26 +19,26 @@
 <line x1="73" y1="48" x2="69" y2="44" stroke="#c89828" stroke-width="1.2" stroke-opacity="0.40"/>
 <path d="M107 76 L111 82 L107 88 L103 82 Z" fill="none" stroke="#c89828" stroke-width="0.7" stroke-opacity="0.24"/>
 <!-- hood sides -->
-<path d="M64 64 C56 72 52 88 56 108 C58 118 62 126 68 132 C56 128 44 116 40 100 C36 82 40 62 52 50 C60 42 72 38 84 38 Z" fill="#0c0804"/>
-<path d="M138 60 C146 68 150 84 146 104 C144 114 140 124 134 130 C146 126 158 114 162 98 C166 80 162 60 150 48 C142 40 130 36 118 38 Z" fill="#0c0804"/>
+<path d="M64 64 C56 72 52 88 56 108 C58 118 62 126 68 132 C56 128 44 116 40 100 C36 82 40 62 52 50 C60 42 72 38 84 38 Z" fill="#040302"/>
+<path d="M138 60 C146 68 150 84 146 104 C144 114 140 124 134 130 C146 126 158 114 162 98 C166 80 162 60 150 48 C142 40 130 36 118 38 Z" fill="#040302"/>
 <!-- hood top -->
-<path d="M82 36 C90 30 110 30 120 36 C126 40 130 46 128 52 C120 44 110 40 100 40 C90 40 80 44 74 52 C72 46 74 40 82 36 Z" fill="#0e0a06"/>
+<path d="M82 36 C90 30 110 30 120 36 C126 40 130 46 128 52 C120 44 110 40 100 40 C90 40 80 44 74 52 C72 46 74 40 82 36 Z" fill="#040302"/>
 <!-- face in shadow -->
-<path d="M84 54 C80 60 78 68 80 78 C82 86 86 94 92 100 C96 104 102 106 108 104 C114 100 118 92 118 80 C118 68 114 58 108 52 C104 48 96 48 90 50 Z" fill="#090604"/>
+<path d="M84 54 C80 60 78 68 80 78 C82 86 86 94 92 100 C96 104 102 106 108 104 C114 100 118 92 118 80 C118 68 114 58 108 52 C104 48 96 48 90 50 Z" fill="#040302"/>
 <!-- partial nose -->
-<path d="M82 70 C80 74 80 78 82 81 C84 83 86 82 86 78" fill="#090604"/>
+<path d="M82 70 C80 74 80 78 82 81 C84 83 86 82 86 78" fill="#040302"/>
 <!-- glowing eyes hint -->
 <ellipse cx="96" cy="74" rx="4" ry="2.5" fill="#c89828" fill-opacity="0.12"/>
 <ellipse cx="110" cy="72" rx="4" ry="2.5" fill="#c89828" fill-opacity="0.10"/>
 <!-- neck -->
-<path d="M90 102 C88 110 88 118 90 124 C92 128 96 130 102 130 C108 130 112 128 114 124 C116 118 116 110 114 102 C110 100 106 100 102 100 C98 100 94 100 90 102 Z" fill="#080604"/>
+<path d="M90 102 C88 110 88 118 90 124 C92 128 96 130 102 130 C108 130 112 128 114 124 C116 118 116 110 114 102 C110 100 106 100 102 100 C98 100 94 100 90 102 Z" fill="#040302"/>
 <!-- cloak shoulders -->
-<path d="M28 232 C24 192 40 162 66 148 C76 142 86 140 100 138 C114 140 126 144 136 150 C162 164 174 194 172 232 Z" fill="#0a0704"/>
-<path d="M24 256 L28 232 L172 232 L176 256 Z" fill="#080603"/>
+<path d="M28 232 C24 192 40 162 66 148 C76 142 86 140 100 138 C114 140 126 144 136 150 C162 164 174 194 172 232 Z" fill="#040302"/>
+<path d="M24 256 L28 232 L172 232 L176 256 Z" fill="#040302"/>
 <!-- rim light on hood edge -->
 <path d="M64 64 C56 72 52 88 56 108 C58 118 62 126 68 132" fill="none" stroke="#c89828" stroke-width="0.8" stroke-opacity="0.18"/>
 <path d="M28 232 C24 192 40 162 66 148" fill="none" stroke="#c89828" stroke-width="0.5" stroke-opacity="0.13"/>
-<ellipse cx="100" cy="248" rx="88" ry="18" fill="#030201" fill-opacity="0.70"/>
+<ellipse cx="100" cy="248" rx="88" ry="18" fill="#040302" fill-opacity="0.70"/>
 <rect x="7" y="7" width="186" height="256" fill="none" stroke="#c89828" stroke-width="2" stroke-opacity="0.07"/>
 <rect x="9" y="9" width="182" height="252" fill="none" stroke="#c89828" stroke-width="1.1" stroke-opacity="0.38"/>
 <rect x="13" y="13" width="174" height="244" fill="none" stroke="#c89828" stroke-width="0.4" stroke-opacity="0.15"/>

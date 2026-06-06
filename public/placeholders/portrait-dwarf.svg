@@ -1,8 +1,8 @@
 <svg viewBox="0 0 200 270" xmlns="http://www.w3.org/2000/svg">
 <defs>
-  <radialGradient id="bg" cx="53%" cy="28%" r="75%"><stop offset="0%" stop-color="#1c1006"/><stop offset="45%" stop-color="#0e0903"/><stop offset="100%" stop-color="#060402"/></radialGradient>
-  <radialGradient id="atm" cx="53%" cy="30%" r="36%"><stop offset="0%" stop-color="#d08840" stop-opacity="0.13"/><stop offset="100%" stop-color="#d08840" stop-opacity="0"/></radialGradient>
-  <radialGradient id="vig" cx="50%" cy="42%" r="62%"><stop offset="40%" stop-color="transparent"/><stop offset="100%" stop-color="#040201" stop-opacity="0.88"/></radialGradient>
+  <radialGradient id="bg" cx="53%" cy="28%" r="75%"><stop offset="0%" stop-color="#241408"/><stop offset="45%" stop-color="#0e0903"/><stop offset="100%" stop-color="#060402"/></radialGradient>
+  <radialGradient id="atm" cx="53%" cy="30%" r="36%"><stop offset="0%" stop-color="#d08840" stop-opacity="0.35"/><stop offset="100%" stop-color="#d08840" stop-opacity="0"/></radialGradient>
+  <radialGradient id="vig" cx="50%" cy="42%" r="62%"><stop offset="40%" stop-color="transparent"/><stop offset="100%" stop-color="#040201" stop-opacity="0.55"/></radialGradient>
 </defs>
 <rect width="200" height="270" fill="url(#bg)"/>
 <rect width="200" height="270" fill="url(#atm)"/>
@@ -18,20 +18,20 @@
 <line x1="59" y1="78" x2="53" y2="78" stroke="#d08840" stroke-width="1.2" stroke-opacity="0.40"/>
 <line x1="73" y1="44" x2="69" y2="40" stroke="#d08840" stroke-width="1.2" stroke-opacity="0.40"/>
 <path d="M107 72 L111 78 L107 84 L103 78 Z" fill="none" stroke="#d08840" stroke-width="0.7" stroke-opacity="0.24"/>
-<path d="M96 38 C86 36 76 40 70 48 C66 54 66 62 68 70 L72 66 C76 52 84 44 96 42 Z" fill="#0e0903"/>
-<path d="M116 40 C126 38 134 42 138 50 C140 56 140 64 138 72 L134 66 C130 52 122 44 110 42 Z" fill="#0e0903"/>
-<path d="M96 38 C84 38 74 44 70 54 C66 64 66 76 70 84 C72 90 76 96 80 100 C84 104 88 106 94 106 C100 106 106 104 110 100 C114 94 116 86 114 76 C112 64 106 50 96 38 Z" fill="#100a04"/>
-<path d="M110 62 C114 60 116 64 116 70 C116 74 114 76 112 74 C110 72 110 64 110 62 Z" fill="#100a04"/>
-<path d="M72 62 C70 66 68 70 70 75 C72 78 74 76 74 72" fill="#100a04"/>
-<path d="M72 102 C68 112 64 128 62 148 C60 168 62 184 66 196 C72 202 80 204 92 204 C100 204 108 202 114 196 C118 186 118 168 116 148 C114 132 110 116 106 104 C100 102 96 100 92 100 C84 102 78 102 72 102 Z" fill="#0c0803"/>
+<path d="M96 38 C86 36 76 40 70 48 C66 54 66 62 68 70 L72 66 C76 52 84 44 96 42 Z" fill="#050302"/>
+<path d="M116 40 C126 38 134 42 138 50 C140 56 140 64 138 72 L134 66 C130 52 122 44 110 42 Z" fill="#050302"/>
+<path d="M96 38 C84 38 74 44 70 54 C66 64 66 76 70 84 C72 90 76 96 80 100 C84 104 88 106 94 106 C100 106 106 104 110 100 C114 94 116 86 114 76 C112 64 106 50 96 38 Z" fill="#050302"/>
+<path d="M110 62 C114 60 116 64 116 70 C116 74 114 76 112 74 C110 72 110 64 110 62 Z" fill="#050302"/>
+<path d="M72 62 C70 66 68 70 70 75 C72 78 74 76 74 72" fill="#050302"/>
+<path d="M72 102 C68 112 64 128 62 148 C60 168 62 184 66 196 C72 202 80 204 92 204 C100 204 108 202 114 196 C118 186 118 168 116 148 C114 132 110 116 106 104 C100 102 96 100 92 100 C84 102 78 102 72 102 Z" fill="#050302"/>
 <path d="M80 108 C78 124 78 144 82 164 C84 176 88 192 90 200" fill="none" stroke="#1a1008" stroke-width="2.8" stroke-opacity="0.55"/>
 <path d="M100 106 C102 122 104 142 102 162 C100 178 96 192 94 200" fill="none" stroke="#1a1008" stroke-width="2.8" stroke-opacity="0.55"/>
-<path d="M80 104 C78 112 78 120 80 126 C82 130 86 132 92 132 C98 132 102 130 104 126 C106 120 106 112 104 104 C100 102 96 100 92 100 C88 100 84 100 80 104 Z" fill="#100a04"/>
-<path d="M28 232 C26 196 42 170 66 156 C74 152 82 150 92 148 C102 150 114 154 124 160 C150 174 164 198 162 232 Z" fill="#0e0803"/>
-<path d="M26 256 L28 232 L162 232 L166 256 Z" fill="#0c0702"/>
+<path d="M80 104 C78 112 78 120 80 126 C82 130 86 132 92 132 C98 132 102 130 104 126 C106 120 106 112 104 104 C100 102 96 100 92 100 C88 100 84 100 80 104 Z" fill="#050302"/>
+<path d="M28 232 C26 196 42 170 66 156 C74 152 82 150 92 148 C102 150 114 154 124 160 C150 174 164 198 162 232 Z" fill="#050302"/>
+<path d="M26 256 L28 232 L162 232 L166 256 Z" fill="#050302"/>
 <path d="M70 54 C66 64 66 76 70 84 C72 90 76 96 80 100" fill="none" stroke="#d08840" stroke-width="0.8" stroke-opacity="0.20"/>
 <path d="M28 232 C26 196 42 170 66 156" fill="none" stroke="#d08840" stroke-width="0.5" stroke-opacity="0.14"/>
-<ellipse cx="100" cy="248" rx="88" ry="18" fill="#040201" fill-opacity="0.70"/>
+<ellipse cx="100" cy="248" rx="88" ry="18" fill="#050302" fill-opacity="0.70"/>
 <rect x="7" y="7" width="186" height="256" fill="none" stroke="#d08840" stroke-width="2" stroke-opacity="0.07"/>
 <rect x="9" y="9" width="182" height="252" fill="none" stroke="#d08840" stroke-width="1.1" stroke-opacity="0.38"/>
 <rect x="13" y="13" width="174" height="244" fill="none" stroke="#d08840" stroke-width="0.4" stroke-opacity="0.15"/>
