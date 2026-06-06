@@ -269,8 +269,8 @@ function DesktopRedesign({ character, imageUrl, isGenerating, isLoadingImage, im
                 )
               })}
               {([
-                { label: 'AC',   value: c.armorClass,       color: '#3e8ab0' },
-                { label: 'INIT', value: (() => { const n = parseInt(String(c.initiative).replace(/[^-\d]/g,'')); return (n >= 0 ? '+' : '') + n })(), color: '#c8a030' },
+                { label: 'AC',   value: c.armorClass,       color: '#7dd4f8' },
+                { label: 'INIT', value: (() => { const n = parseInt(String(c.initiative).replace(/[^-\d]/g,'')); return (n >= 0 ? '+' : '') + n })(), color: '#f0c040' },
                 { label: 'SPD',  value: c.speed,            color: 'rgba(42,20,4,0.80)' },
               ] as const).map(({ label, value, color }) => (
                 <div key={label} style={{ textAlign: 'center', borderRadius: 4, border: '1px solid rgba(42,20,4,0.35)', background: 'rgba(0,0,0,0.16)', padding: '4px 1px' }}>
