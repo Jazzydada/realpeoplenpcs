@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cinzel+Decorative:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Fantasy color palette */
+  --color-parchment-50: #fdf8f0;
+  --color-parchment-100: #faf0e0;
+  --color-parchment-200: #f0dab8;
+  --color-parchment-300: #e5c48a;
+  --color-parchment-400: #d4aa6a;
+  --color-parchment-500: #c9a87c;
+  --color-parchment-600: #b8956a;
+  --color-parchment-700: #9a7550;
+  --color-parchment-800: #7a5535;
+  --color-parchment-900: #5c3d1e;
+
+  --color-gold-100: #fef9e7;
+  --color-gold-200: #fdeeba;
+  --color-gold-300: #f9d97e;
+  --color-gold-400: #f5c842;
+  --color-gold-500: #d4af37;
+  --color-gold-600: #c9a84c;
+  --color-gold-700: #a0832a;
+  --color-gold-800: #7a6020;
+
+  --color-ink-50: #4a2e14;
+  --color-ink-100: #2c1a0e;
+  --color-ink-200: #1a0f07;
+  --color-ink-900: #0d0b07;
+
+  /* Fantasy fonts */
+  --font-cinzel: 'Cinzel', 'Trajan Pro', 'Times New Roman', serif;
+  --font-crimson: 'Crimson Text', Georgia, 'Times New Roman', serif;
+}
+
+/* Base */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: #0d0b07;
+}
+
+body {
+  color: #d4b896;
+  font-family: 'Crimson Text', Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Font utilities */
+.font-cinzel            { font-family: 'Cinzel', 'Trajan Pro', 'Times New Roman', serif; }
+.font-cinzel-decorative { font-family: 'Cinzel Decorative', 'Cinzel', 'Times New Roman', serif; }
+.font-crimson           { font-family: 'Crimson Text', Georgia, 'Times New Roman', serif; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #0d0b07; }
+::-webkit-scrollbar-thumb { background: rgba(212,175,55,0.3); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(212,175,55,0.5); }
+
+/* Gold shimmer */
+.text-gold-shimmer {
+  background: linear-gradient(90deg, #c9a84c 0%, #f5c842 25%, #d4af37 50%, #f5c842 75%, #c9a84c 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+/* Pulse gold */
+.animate-pulse-gold { animation: pulse-gold 2.5s ease-in-out infinite; }
+
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 5px rgba(212,175,55,0.3), 0 0 10px rgba(212,175,55,0.1); }
+  50%       { box-shadow: 0 0 15px rgba(212,175,55,0.7), 0 0 30px rgba(212,175,55,0.3); }
+}
+
+/* Float */
+.animate-float { animation: float 6s ease-in-out infinite; }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+/* Fade in */
+.animate-fade-in { animation: fade-in 0.6s ease-out forwards; }
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Focus */
+button:focus-visible { outline: 1px solid rgba(212,175,55,0.6); outline-offset: 2px; }
+
+
+/* START: compact scrollbars for long GM data panels */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(201,168,76,0.35) rgba(13,11,7,0.35);
+}
+.custom-scrollbar::-webkit-scrollbar { width: 6px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: rgba(13,11,7,0.35); }
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(201,168,76,0.35);
+  border-radius: 999px;
+}
+/* END: compact scrollbars for long GM data panels */

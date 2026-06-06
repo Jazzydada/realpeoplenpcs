@@ -1,0 +1,39 @@
+<svg viewBox="0 0 200 270" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="52%" cy="35%" r="68%">
+      <stop offset="0%" stop-color="#041e10"/>
+      <stop offset="100%" stop-color="#020e08"/>
+    </radialGradient>
+  </defs>
+  <rect width="200" height="270" fill="url(#bg)"/>
+  <!-- outer frame -->
+  <rect x="10" y="10" width="180" height="250" fill="none" stroke="#48c880" stroke-width="0.9" stroke-opacity="0.30"/>
+  <rect x="14" y="14" width="172" height="242" fill="none" stroke="#48c880" stroke-width="0.4" stroke-opacity="0.14"/>
+  <!-- corner ornaments -->
+  <path d="M10 10 L10 24 M10 10 L24 10" stroke="#48c880" stroke-width="1.6" stroke-opacity="0.60" fill="none" stroke-linecap="round"/>
+  <path d="M190 10 L190 24 M190 10 L176 10" stroke="#48c880" stroke-width="1.6" stroke-opacity="0.60" fill="none" stroke-linecap="round"/>
+  <path d="M10 260 L10 246 M10 260 L24 260" stroke="#48c880" stroke-width="1.6" stroke-opacity="0.60" fill="none" stroke-linecap="round"/>
+  <path d="M190 260 L190 246 M190 260 L176 260" stroke="#48c880" stroke-width="1.6" stroke-opacity="0.60" fill="none" stroke-linecap="round"/>
+  <!-- arcane circles -->
+  <circle cx="100" cy="148" r="80" fill="none" stroke="#48c880" stroke-width="0.6" stroke-opacity="0.14"/>
+  <circle cx="100" cy="148" r="64" fill="none" stroke="#48c880" stroke-width="0.4" stroke-opacity="0.09"/>
+  <line x1="100.0" y1="68.0" x2="100.0" y2="76.0" stroke="#48c880" stroke-width="0.9" stroke-opacity="0.28"/><line x1="156.6" y1="91.4" x2="150.9" y2="97.1" stroke="#48c880" stroke-width="0.9" stroke-opacity="0.28"/><line x1="180.0" y1="148.0" x2="172.0" y2="148.0" stroke="#48c880" stroke-width="0.9" stroke-opacity="0.28"/><line x1="156.6" y1="204.6" x2="150.9" y2="198.9" stroke="#48c880" stroke-width="0.9" stroke-opacity="0.28"/><line x1="100.0" y1="228.0" x2="100.0" y2="220.0" stroke="#48c880" stroke-width="0.9" stroke-opacity="0.28"/><line x1="43.4" y1="204.6" x2="49.1" y2="198.9" stroke="#48c880" stroke-width="0.9" stroke-opacity="0.28"/><line x1="20.0" y1="148.0" x2="28.0" y2="148.0" stroke="#48c880" stroke-width="0.9" stroke-opacity="0.28"/><line x1="43.4" y1="91.4" x2="49.1" y2="97.1" stroke="#48c880" stroke-width="0.9" stroke-opacity="0.28"/>
+  <rect x="98" y="85" width="4" height="9" rx="1.5" fill="#48c880" fill-opacity="0.18000000000000002" transform="rotate(0 100 116)"/><rect x="98" y="85" width="4" height="9" rx="1.5" fill="#48c880" fill-opacity="0.18000000000000002" transform="rotate(36 100 116)"/><rect x="98" y="85" width="4" height="9" rx="1.5" fill="#48c880" fill-opacity="0.18000000000000002" transform="rotate(72 100 116)"/><rect x="98" y="85" width="4" height="9" rx="1.5" fill="#48c880" fill-opacity="0.18000000000000002" transform="rotate(108 100 116)"/><rect x="98" y="85" width="4" height="9" rx="1.5" fill="#48c880" fill-opacity="0.18000000000000002" transform="rotate(144 100 116)"/><rect x="98" y="85" width="4" height="9" rx="1.5" fill="#48c880" fill-opacity="0.18000000000000002" transform="rotate(180 100 116)"/><rect x="98" y="85" width="4" height="9" rx="1.5" fill="#48c880" fill-opacity="0.18000000000000002" transform="rotate(216 100 116)"/><rect x="98" y="85" width="4" height="9" rx="1.5" fill="#48c880" fill-opacity="0.18000000000000002" transform="rotate(252 100 116)"/><rect x="98" y="85" width="4" height="9" rx="1.5" fill="#48c880" fill-opacity="0.18000000000000002" transform="rotate(288 100 116)"/><rect x="98" y="85" width="4" height="9" rx="1.5" fill="#48c880" fill-opacity="0.18000000000000002" transform="rotate(324 100 116)"/><circle cx="100" cy="116" r="18" fill="none" stroke="#48c880" stroke-width="1.0" stroke-opacity="0.2"/><circle cx="100" cy="116" r="7" fill="#48c880" fill-opacity="0.1"/>
+  
+  <!-- wild whimsical hair sticking up -->
+  <path d="M98 44 C86 38 72 42 66 52 C62 46 66 36 76 30 C86 26 98 30 104 38 Z" fill="rgba(3,2,1,0.97)"/>
+  <path d="M104 36 C108 30 114 28 118 34 C116 30 112 30 108 34 Z" fill="rgba(3,2,1,0.97)"/>
+  <path d="M86 34 C82 28 78 28 76 32 C78 28 84 26 88 30 Z" fill="rgba(3,2,1,0.97)"/>
+  <!-- large rounded head (big relative to body) -->
+  <path d="M98 44 C84 44 74 50 70 62 C66 72 66 84 70 94 C73 102 78 108 84 112 C88 114 92 116 97 116 C102 116 106 114 110 110 C113 104 115 94 113 82 C111 66 107 52 98 44 Z" fill="rgba(3,2,1,0.97)"/>
+  <!-- big nose -->
+  <path d="M70 70 C67 76 66 82 68 86 C70 88 72 86 72 82" fill="rgba(3,2,1,0.97)"/>
+  <!-- ear -->
+  <path d="M111 66 C115 66 116 70 116 74 C116 78 114 80 112 80 C110 78 110 68 111 66 Z" fill="rgba(3,2,1,0.97)"/>
+  <!-- neck -->
+  <path d="M84 114 C82 120 82 126 84 130 C86 133 90 134 96 134 C101 134 105 133 107 130 C109 126 109 120 107 114 C103 112 99 112 96 112 C92 112 87 112 84 114 Z" fill="rgba(3,2,1,0.97)"/>
+  <!-- SMALL compact body -->
+  <path d="M50 200 C48 170 60 150 82 140 C88 136 92 134 96 132 C104 134 112 138 122 142 C140 152 150 172 152 200 Z" fill="rgba(3,2,1,0.97)"/>
+  <path d="M50 200 L46 228 L154 228 L152 200 Z" fill="rgba(5,3,1,0.88)"/>
+  <text x="100" y="254" text-anchor="middle" font-family="Georgia,serif" font-size="7" letter-spacing="2.5" fill="#48c880" fill-opacity="0.50">GNOME</text>
+</svg>

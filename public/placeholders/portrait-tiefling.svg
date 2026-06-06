@@ -1,0 +1,41 @@
+<svg viewBox="0 0 200 270" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="52%" cy="35%" r="68%">
+      <stop offset="0%" stop-color="#1c0410"/>
+      <stop offset="100%" stop-color="#0c0208"/>
+    </radialGradient>
+  </defs>
+  <rect width="200" height="270" fill="url(#bg)"/>
+  <!-- outer frame -->
+  <rect x="10" y="10" width="180" height="250" fill="none" stroke="#cc3858" stroke-width="0.9" stroke-opacity="0.30"/>
+  <rect x="14" y="14" width="172" height="242" fill="none" stroke="#cc3858" stroke-width="0.4" stroke-opacity="0.14"/>
+  <!-- corner ornaments -->
+  <path d="M10 10 L10 24 M10 10 L24 10" stroke="#cc3858" stroke-width="1.6" stroke-opacity="0.60" fill="none" stroke-linecap="round"/>
+  <path d="M190 10 L190 24 M190 10 L176 10" stroke="#cc3858" stroke-width="1.6" stroke-opacity="0.60" fill="none" stroke-linecap="round"/>
+  <path d="M10 260 L10 246 M10 260 L24 260" stroke="#cc3858" stroke-width="1.6" stroke-opacity="0.60" fill="none" stroke-linecap="round"/>
+  <path d="M190 260 L190 246 M190 260 L176 260" stroke="#cc3858" stroke-width="1.6" stroke-opacity="0.60" fill="none" stroke-linecap="round"/>
+  <!-- arcane circles -->
+  <circle cx="100" cy="148" r="80" fill="none" stroke="#cc3858" stroke-width="0.6" stroke-opacity="0.14"/>
+  <circle cx="100" cy="148" r="64" fill="none" stroke="#cc3858" stroke-width="0.4" stroke-opacity="0.09"/>
+  <line x1="100.0" y1="68.0" x2="100.0" y2="76.0" stroke="#cc3858" stroke-width="0.9" stroke-opacity="0.28"/><line x1="156.6" y1="91.4" x2="150.9" y2="97.1" stroke="#cc3858" stroke-width="0.9" stroke-opacity="0.28"/><line x1="180.0" y1="148.0" x2="172.0" y2="148.0" stroke="#cc3858" stroke-width="0.9" stroke-opacity="0.28"/><line x1="156.6" y1="204.6" x2="150.9" y2="198.9" stroke="#cc3858" stroke-width="0.9" stroke-opacity="0.28"/><line x1="100.0" y1="228.0" x2="100.0" y2="220.0" stroke="#cc3858" stroke-width="0.9" stroke-opacity="0.28"/><line x1="43.4" y1="204.6" x2="49.1" y2="198.9" stroke="#cc3858" stroke-width="0.9" stroke-opacity="0.28"/><line x1="20.0" y1="148.0" x2="28.0" y2="148.0" stroke="#cc3858" stroke-width="0.9" stroke-opacity="0.28"/><line x1="43.4" y1="91.4" x2="49.1" y2="97.1" stroke="#cc3858" stroke-width="0.9" stroke-opacity="0.28"/>
+  <path d="M100 84 C96 95 88 104 91 117 C94 124 100 128 100 128 C100 128 106 124 109 117 C112 104 104 95 100 84Z M100 100 C98 107 95 112 97 118 C99 122 100 124 100 124 C100 124 101 122 103 118 C105 112 102 107 100 100Z" fill="#cc3858" fill-opacity="0.22" stroke="#cc3858" stroke-width="0.5" stroke-opacity="0.264"/>
+  
+  <!-- hair sweeping back -->
+  <path d="M100 36 C88 30 74 32 68 42 C62 52 62 66 64 78 C60 66 60 52 66 40 C74 28 90 24 100 30 Z" fill="rgba(3,2,1,0.97)"/>
+  <!-- head profile -->
+  <path d="M100 36 C88 36 78 42 74 52 C70 62 70 74 74 84 C77 92 82 98 88 102 C92 106 96 108 100 108 C104 108 108 106 112 101 C115 94 116 84 114 72 C112 58 108 46 100 36 Z" fill="rgba(3,2,1,0.97)"/>
+  <!-- nose -->
+  <path d="M74 62 C71 67 70 73 72 77 C74 79 76 77 76 73" fill="rgba(3,2,1,0.97)"/>
+  <!-- ear -->
+  <path d="M112 56 C116 56 118 60 118 66 C118 70 116 72 114 72 C112 70 112 60 112 56 Z" fill="rgba(3,2,1,0.97)"/>
+  <!-- CURVED HORN sweeping back (key racial feature) -->
+  <path d="M88 38 C82 28 74 18 68 12 C70 18 74 26 78 34 C80 40 82 46 84 50 L88 38 Z" fill="rgba(3,2,1,0.97)"/>
+  <!-- neck (slender) -->
+  <path d="M88 104 C86 112 86 120 89 126 C91 130 95 132 100 132 C105 132 109 130 111 126 C113 120 113 112 111 104 C107 102 103 102 100 102 C96 102 91 102 88 104 Z" fill="rgba(3,2,1,0.97)"/>
+  <!-- shoulders -->
+  <path d="M38 200 C36 168 50 148 74 138 C82 134 88 132 100 130 C112 132 122 136 132 142 C154 152 164 172 166 200 Z" fill="rgba(3,2,1,0.97)"/>
+  <path d="M38 200 L34 228 L166 228 L166 200 Z" fill="rgba(5,3,1,0.88)"/>
+  <!-- tail hint at bottom right -->
+  <path d="M156 200 C162 186 166 174 162 162 C158 156 154 162 152 170 C156 178 158 190 156 200 Z" fill="rgba(5,3,1,0.88)"/>
+  <text x="100" y="254" text-anchor="middle" font-family="Georgia,serif" font-size="7" letter-spacing="2.5" fill="#cc3858" fill-opacity="0.50">TIEFLING</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg viewBox="0 0 200 270" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="52%" cy="35%" r="68%">
+      <stop offset="0%" stop-color="#1c0e04"/>
+      <stop offset="100%" stop-color="#0c0602"/>
+    </radialGradient>
+  </defs>
+  <rect width="200" height="270" fill="url(#bg)"/>
+  <!-- outer frame -->
+  <rect x="10" y="10" width="180" height="250" fill="none" stroke="#c07838" stroke-width="0.9" stroke-opacity="0.30"/>
+  <rect x="14" y="14" width="172" height="242" fill="none" stroke="#c07838" stroke-width="0.4" stroke-opacity="0.14"/>
+  <!-- corner ornaments -->
+  <path d="M10 10 L10 24 M10 10 L24 10" stroke="#c07838" stroke-width="1.6" stroke-opacity="0.60" fill="none" stroke-linecap="round"/>
+  <path d="M190 10 L190 24 M190 10 L176 10" stroke="#c07838" stroke-width="1.6" stroke-opacity="0.60" fill="none" stroke-linecap="round"/>
+  <path d="M10 260 L10 246 M10 260 L24 260" stroke="#c07838" stroke-width="1.6" stroke-opacity="0.60" fill="none" stroke-linecap="round"/>
+  <path d="M190 260 L190 246 M190 260 L176 260" stroke="#c07838" stroke-width="1.6" stroke-opacity="0.60" fill="none" stroke-linecap="round"/>
+  <!-- arcane circles -->
+  <circle cx="100" cy="148" r="80" fill="none" stroke="#c07838" stroke-width="0.6" stroke-opacity="0.14"/>
+  <circle cx="100" cy="148" r="64" fill="none" stroke="#c07838" stroke-width="0.4" stroke-opacity="0.09"/>
+  <line x1="100.0" y1="68.0" x2="100.0" y2="76.0" stroke="#c07838" stroke-width="0.9" stroke-opacity="0.28"/><line x1="156.6" y1="91.4" x2="150.9" y2="97.1" stroke="#c07838" stroke-width="0.9" stroke-opacity="0.28"/><line x1="180.0" y1="148.0" x2="172.0" y2="148.0" stroke="#c07838" stroke-width="0.9" stroke-opacity="0.28"/><line x1="156.6" y1="204.6" x2="150.9" y2="198.9" stroke="#c07838" stroke-width="0.9" stroke-opacity="0.28"/><line x1="100.0" y1="228.0" x2="100.0" y2="220.0" stroke="#c07838" stroke-width="0.9" stroke-opacity="0.28"/><line x1="43.4" y1="204.6" x2="49.1" y2="198.9" stroke="#c07838" stroke-width="0.9" stroke-opacity="0.28"/><line x1="20.0" y1="148.0" x2="28.0" y2="148.0" stroke="#c07838" stroke-width="0.9" stroke-opacity="0.28"/><line x1="43.4" y1="91.4" x2="49.1" y2="97.1" stroke="#c07838" stroke-width="0.9" stroke-opacity="0.28"/>
+  <path d="M88 94 L88 136 M88 115 L112 115 M112 94 L112 136 M94 94 L100 104 L106 94 M94 136 L100 126 L106 136" fill="none" stroke="#c07838" stroke-width="1.1" stroke-opacity="0.22" stroke-linecap="round"/>
+  
+  <!-- braided hair / helm suggestion -->
+  <path d="M94 40 C82 36 70 40 66 50 C64 44 68 36 76 32 C84 28 94 30 100 36 Z" fill="rgba(3,2,1,0.97)"/>
+  <!-- head profile (wide, robust jaw) -->
+  <path d="M96 38 C84 38 74 44 70 54 C66 64 66 76 70 86 C72 94 77 100 82 104 C86 108 90 110 95 110 C100 110 104 108 107 104 C110 98 112 90 110 80 C108 68 104 52 96 38 Z" fill="rgba(3,2,1,0.97)"/>
+  <!-- broad nose -->
+  <path d="M70 64 C67 70 66 76 68 80 C70 82 72 80 72 76" fill="rgba(3,2,1,0.97)"/>
+  <!-- ear (rounded, sturdy) -->
+  <path d="M108 58 C112 58 114 62 114 68 C114 72 112 74 110 74 C108 72 108 62 108 58 Z" fill="rgba(3,2,1,0.97)"/>
+  <!-- THICK BEARD (key racial feature) -->
+  <path d="M70 88 C68 96 68 108 72 118 C76 126 82 130 90 132 C94 133 97 134 97 134 C86 134 78 130 72 124 C66 116 64 104 66 92 Z" fill="rgba(3,2,1,0.97)"/>
+  <path d="M82 106 C78 114 78 124 82 130 C86 134 92 136 97 136 L97 110 Z" fill="rgba(3,2,1,0.97)"/>
+  <!-- neck (short, thick) -->
+  <path d="M82 106 C80 112 80 120 82 126 C84 130 88 132 93 132 C97 132 101 130 104 126 C106 120 106 112 104 106 C100 104 96 104 93 104 C89 104 85 104 82 106 Z" fill="rgba(3,2,1,0.97)"/>
+  <!-- WIDE stocky shoulders -->
+  <path d="M24 200 C22 164 38 144 68 134 C78 130 86 128 95 128 C108 130 120 134 132 138 C158 148 172 168 174 200 Z" fill="rgba(3,2,1,0.97)"/>
+  <path d="M24 200 L20 228 L180 228 L174 200 Z" fill="rgba(5,3,1,0.88)"/>
+  <text x="100" y="254" text-anchor="middle" font-family="Georgia,serif" font-size="7" letter-spacing="2.5" fill="#c07838" fill-opacity="0.50">DWARF</text>
+</svg>
