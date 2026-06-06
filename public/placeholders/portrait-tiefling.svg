@@ -1,55 +1,71 @@
 <svg viewBox="0 0 200 270" xmlns="http://www.w3.org/2000/svg">
 <defs>
-  <radialGradient id="bg" cx="53%" cy="28%" r="75%"><stop offset="0%" stop-color="#240608"/><stop offset="45%" stop-color="#0e0204"/><stop offset="100%" stop-color="#060102"/></radialGradient>
-  <radialGradient id="atm" cx="53%" cy="30%" r="36%"><stop offset="0%" stop-color="#d03068" stop-opacity="0.35"/><stop offset="100%" stop-color="#d03068" stop-opacity="0"/></radialGradient>
-  <radialGradient id="vig" cx="50%" cy="42%" r="62%"><stop offset="40%" stop-color="transparent"/><stop offset="100%" stop-color="#040101" stop-opacity="0.55"/></radialGradient>
+  <radialGradient id="bg" cx="53%" cy="30%" r="75%">
+    <stop offset="0%" stop-color="#220408"/>
+    <stop offset="50%" stop-color="#120204"/>
+    <stop offset="100%" stop-color="#040302"/>
+  </radialGradient>
+  <radialGradient id="atm" cx="53%" cy="32%" r="42%">
+    <stop offset="0%" stop-color="#d03068" stop-opacity="0.38"/>
+    <stop offset="100%" stop-color="#d03068" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="vig" cx="50%" cy="44%" r="65%">
+    <stop offset="35%" stop-color="transparent"/>
+    <stop offset="100%" stop-color="#020101" stop-opacity="0.55"/>
+  </radialGradient>
 </defs>
 <rect width="200" height="270" fill="url(#bg)"/>
 <rect width="200" height="270" fill="url(#atm)"/>
-<circle cx="107" cy="82" r="54" fill="none" stroke="#d03068" stroke-width="3" stroke-opacity="0.05"/>
-<circle cx="107" cy="82" r="51" fill="none" stroke="#d03068" stroke-width="0.9" stroke-opacity="0.26"/>
-<circle cx="107" cy="82" r="44" fill="none" stroke="#d03068" stroke-width="0.45" stroke-opacity="0.14"/>
-<line x1="107" y1="33" x2="107" y2="27" stroke="#d03068" stroke-width="1.2" stroke-opacity="0.40"/>
-<line x1="141" y1="48" x2="145" y2="44" stroke="#d03068" stroke-width="1.2" stroke-opacity="0.40"/>
-<line x1="155" y1="82" x2="161" y2="82" stroke="#d03068" stroke-width="1.2" stroke-opacity="0.40"/>
-<line x1="141" y1="116" x2="145" y2="120" stroke="#d03068" stroke-width="1.2" stroke-opacity="0.40"/>
-<line x1="107" y1="131" x2="107" y2="137" stroke="#d03068" stroke-width="1.2" stroke-opacity="0.40"/>
-<line x1="73" y1="116" x2="69" y2="120" stroke="#d03068" stroke-width="1.2" stroke-opacity="0.40"/>
-<line x1="59" y1="82" x2="53" y2="82" stroke="#d03068" stroke-width="1.2" stroke-opacity="0.40"/>
-<line x1="73" y1="48" x2="69" y2="44" stroke="#d03068" stroke-width="1.2" stroke-opacity="0.40"/>
-<path d="M107 76 L111 82 L107 88 L103 82 Z" fill="none" stroke="#d03068" stroke-width="0.7" stroke-opacity="0.24"/>
-<path d="M100 36 C90 30 76 34 70 44 C64 54 62 68 64 82 C66 92 70 100 74 106 C68 104 60 96 56 82 C52 66 54 50 62 38 C70 26 86 24 96 32 Z" fill="#1a0308"/>
-<!-- CURVED HORN rising from forehead -->
-<path d="M88 40 C84 32 76 22 68 14 C70 22 72 32 76 40 C78 44 84 46 88 44 Z" fill="#260408"/>
-<!-- second smaller horn hint -->
-<path d="M96 36 C94 30 90 24 88 18 C90 26 92 34 94 38 Z" fill="#200408"/>
-<!-- head profile -->
-<path d="M100 36 C88 36 78 42 74 52 C70 62 70 74 74 82 C76 88 80 94 84 98 C88 102 92 104 96 104 C100 104 104 102 108 98 C112 92 114 84 112 74 C110 62 106 48 100 36 Z" fill="#080104"/>
+<!-- rune circle behind head, cx=105 cy=82 r=50 -->
+<circle cx="105" cy="82" r="53" fill="none" stroke="#d03068" stroke-width="3" stroke-opacity="0.06"/>
+<circle cx="105" cy="82" r="50" fill="none" stroke="#d03068" stroke-width="1" stroke-opacity="0.28"/>
+<circle cx="105" cy="82" r="43" fill="none" stroke="#d03068" stroke-width="0.5" stroke-opacity="0.15"/>
+<line x1="105" y1="33" x2="105" y2="27" stroke="#d03068" stroke-width="1.4" stroke-opacity="0.42"/>
+<line x1="140" y1="47" x2="144" y2="43" stroke="#d03068" stroke-width="1.4" stroke-opacity="0.42"/>
+<line x1="153" y1="82" x2="159" y2="82" stroke="#d03068" stroke-width="1.4" stroke-opacity="0.42"/>
+<line x1="140" y1="117" x2="144" y2="121" stroke="#d03068" stroke-width="1.4" stroke-opacity="0.42"/>
+<line x1="105" y1="131" x2="105" y2="137" stroke="#d03068" stroke-width="1.4" stroke-opacity="0.42"/>
+<line x1="70" y1="117" x2="66" y2="121" stroke="#d03068" stroke-width="1.4" stroke-opacity="0.42"/>
+<line x1="57" y1="82" x2="51" y2="82" stroke="#d03068" stroke-width="1.4" stroke-opacity="0.42"/>
+<line x1="70" y1="47" x2="66" y2="43" stroke="#d03068" stroke-width="1.4" stroke-opacity="0.42"/>
+<path d="M105 76 L109 82 L105 88 L101 82 Z" fill="none" stroke="#d03068" stroke-width="0.8" stroke-opacity="0.26"/>
+<!-- ornate frame -->
+<rect x="7" y="7" width="186" height="256" fill="none" stroke="#d03068" stroke-width="2.2" stroke-opacity="0.08"/>
+<rect x="9" y="9" width="182" height="252" fill="none" stroke="#d03068" stroke-width="1.2" stroke-opacity="0.40"/>
+<rect x="13" y="13" width="174" height="244" fill="none" stroke="#d03068" stroke-width="0.5" stroke-opacity="0.16"/>
+<path d="M9 9 L9 30 M9 9 L30 9" stroke="#d03068" stroke-width="2.2" stroke-opacity="0.72" fill="none" stroke-linecap="round"/>
+<circle cx="9" cy="9" r="3" fill="#d03068" fill-opacity="0.45"/>
+<path d="M191 9 L191 30 M191 9 L170 9" stroke="#d03068" stroke-width="2.2" stroke-opacity="0.72" fill="none" stroke-linecap="round"/>
+<circle cx="191" cy="9" r="3" fill="#d03068" fill-opacity="0.45"/>
+<path d="M9 261 L9 240 M9 261 L30 261" stroke="#d03068" stroke-width="2.2" stroke-opacity="0.72" fill="none" stroke-linecap="round"/>
+<circle cx="9" cy="261" r="3" fill="#d03068" fill-opacity="0.45"/>
+<path d="M191 261 L191 240 M191 261 L170 261" stroke="#d03068" stroke-width="2.2" stroke-opacity="0.72" fill="none" stroke-linecap="round"/>
+<circle cx="191" cy="261" r="3" fill="#d03068" fill-opacity="0.45"/>
+<path d="M100 7 L104 11 L100 15 L96 11 Z" fill="#d03068" fill-opacity="0.45"/>
+<path d="M100 255 L104 259 L100 263 L96 259 Z" fill="#d03068" fill-opacity="0.45"/>
+<path d="M7 135 L11 139 L7 143 L3 139 Z" fill="#d03068" fill-opacity="0.45"/>
+<path d="M193 135 L197 139 L193 143 L189 139 Z" fill="#d03068" fill-opacity="0.45"/>
+
+<!-- dark hair mass -->
+<ellipse cx="100" cy="76" rx="34" ry="46" fill="#080104"/>
+<!-- CURVED HORN — large, unmistakable -->
+<path d="M88 44 C82 30 72 16 64 8 C68 18 72 30 78 40 C80 44 84 46 88 44 Z" fill="#080104"/>
+<!-- second horn (smaller) -->
+<path d="M96 40 C92 28 88 16 86 8 C90 18 94 30 96 38 Z" fill="#080104"/>
+<!-- head oval -->
+<ellipse cx="104" cy="80" rx="28" ry="34" fill="#080104"/>
 <!-- ear -->
-<path d="M108 62 C112 58 114 64 114 70 C114 74 112 76 110 74 C108 72 108 64 108 62 Z" fill="#080104"/>
-<path d="M74 62 C72 66 70 70 72 76 C74 78 76 76 76 72" fill="#080104"/>
-<!-- subtle glow eyes -->
-<ellipse cx="86" cy="70" rx="3" ry="2" fill="#ff6090" fill-opacity="0.14"/>
-<path d="M84 104 C82 112 82 120 84 126 C86 130 90 132 96 132 C102 132 106 130 108 126 C110 120 110 112 108 104 C104 102 100 102 96 102 C92 102 88 102 84 104 Z" fill="#080104"/>
-<path d="M38 232 C36 196 50 170 74 156 C82 152 88 150 96 148 C106 150 118 154 128 160 C152 174 164 198 164 232 Z" fill="#080104"/>
-<path d="M36 256 L38 232 L164 232 L166 256 Z" fill="#080104"/>
-<path d="M74 52 C70 62 70 74 74 82 C76 88 80 94 84 98" fill="none" stroke="#d03068" stroke-width="0.8" stroke-opacity="0.22"/>
-<path d="M38 232 C36 196 50 170 74 156" fill="none" stroke="#d03068" stroke-width="0.5" stroke-opacity="0.14"/>
-<ellipse cx="100" cy="248" rx="88" ry="18" fill="#080104" fill-opacity="0.70"/>
-<rect x="7" y="7" width="186" height="256" fill="none" stroke="#d03068" stroke-width="2" stroke-opacity="0.07"/>
-<rect x="9" y="9" width="182" height="252" fill="none" stroke="#d03068" stroke-width="1.1" stroke-opacity="0.38"/>
-<rect x="13" y="13" width="174" height="244" fill="none" stroke="#d03068" stroke-width="0.4" stroke-opacity="0.15"/>
-<path d="M9 9 L9 28 M9 9 L28 9" stroke="#d03068" stroke-width="2" stroke-opacity="0.68" fill="none" stroke-linecap="round"/>
-<circle cx="9" cy="9" r="2.8" fill="#d03068" fill-opacity="0.40"/>
-<path d="M191 9 L191 28 M191 9 L172 9" stroke="#d03068" stroke-width="2" stroke-opacity="0.68" fill="none" stroke-linecap="round"/>
-<circle cx="191" cy="9" r="2.8" fill="#d03068" fill-opacity="0.40"/>
-<path d="M9 261 L9 242 M9 261 L28 261" stroke="#d03068" stroke-width="2" stroke-opacity="0.68" fill="none" stroke-linecap="round"/>
-<circle cx="9" cy="261" r="2.8" fill="#d03068" fill-opacity="0.40"/>
-<path d="M191 261 L191 242 M191 261 L172 261" stroke="#d03068" stroke-width="2" stroke-opacity="0.68" fill="none" stroke-linecap="round"/>
-<circle cx="191" cy="261" r="2.8" fill="#d03068" fill-opacity="0.40"/>
-<path d="M100 7 L103 10 L100 13 L97 10 Z" fill="#d03068" fill-opacity="0.42"/>
-<path d="M100 257 L103 260 L100 263 L97 260 Z" fill="#d03068" fill-opacity="0.42"/>
-<path d="M7 135 L10 138 L7 141 L4 138 Z" fill="#d03068" fill-opacity="0.42"/>
-<path d="M193 135 L196 138 L193 141 L190 138 Z" fill="#d03068" fill-opacity="0.42"/>
+<ellipse cx="130" cy="80" rx="7" ry="10" fill="#080104"/>
+<!-- glowing eyes -->
+<ellipse cx="94" cy="76" rx="4" ry="2.5" fill="#ff4080" fill-opacity="0.20"/>
+<!-- nose -->
+<path d="M81 84 C78 88 77 92 79 95 C81 97 83 95 83 91" fill="#080104"/>
+<!-- neck -->
+<rect x="91" y="112" width="26" height="26" rx="7" fill="#080104"/>
+<!-- shoulders -->
+<path d="M34 234 Q38 172 76 156 Q90 150 104 148 Q118 150 124 156 Q162 172 166 234 Z" fill="#080104"/>
+<!-- rim light -->
+<path d="M79 54 C74 64 74 76 78 86 C80 92 84 98 88 102" fill="none" stroke="#d03068" stroke-width="1.2" stroke-opacity="0.28"/>
+<ellipse cx="100" cy="250" rx="86" ry="14" fill="#030201" fill-opacity="0.65"/>
 <rect width="200" height="270" fill="url(#vig)"/>
 </svg>

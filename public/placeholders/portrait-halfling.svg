@@ -1,47 +1,65 @@
 <svg viewBox="0 0 200 270" xmlns="http://www.w3.org/2000/svg">
 <defs>
-  <radialGradient id="bg" cx="53%" cy="32%" r="75%"><stop offset="0%" stop-color="#183008"/><stop offset="45%" stop-color="#060c03"/><stop offset="100%" stop-color="#030501"/></radialGradient>
-  <radialGradient id="atm" cx="53%" cy="34%" r="36%"><stop offset="0%" stop-color="#88c030" stop-opacity="0.35"/><stop offset="100%" stop-color="#88c030" stop-opacity="0"/></radialGradient>
-  <radialGradient id="vig" cx="50%" cy="44%" r="62%"><stop offset="40%" stop-color="transparent"/><stop offset="100%" stop-color="#020301" stop-opacity="0.55"/></radialGradient>
+  <radialGradient id="bg" cx="53%" cy="30%" r="75%">
+    <stop offset="0%" stop-color="#142a06"/>
+    <stop offset="50%" stop-color="#081604"/>
+    <stop offset="100%" stop-color="#040302"/>
+  </radialGradient>
+  <radialGradient id="atm" cx="53%" cy="32%" r="42%">
+    <stop offset="0%" stop-color="#88c030" stop-opacity="0.38"/>
+    <stop offset="100%" stop-color="#88c030" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="vig" cx="50%" cy="44%" r="65%">
+    <stop offset="35%" stop-color="transparent"/>
+    <stop offset="100%" stop-color="#020101" stop-opacity="0.55"/>
+  </radialGradient>
 </defs>
 <rect width="200" height="270" fill="url(#bg)"/>
 <rect width="200" height="270" fill="url(#atm)"/>
-<circle cx="107" cy="90" r="50" fill="none" stroke="#88c030" stroke-width="3" stroke-opacity="0.05"/>
-<circle cx="107" cy="90" r="47" fill="none" stroke="#88c030" stroke-width="0.9" stroke-opacity="0.24"/>
-<circle cx="107" cy="90" r="40" fill="none" stroke="#88c030" stroke-width="0.45" stroke-opacity="0.13"/>
-<line x1="107" y1="44" x2="107" y2="38" stroke="#88c030" stroke-width="1.2" stroke-opacity="0.38"/>
-<line x1="138" y1="57" x2="142" y2="53" stroke="#88c030" stroke-width="1.2" stroke-opacity="0.38"/>
-<line x1="151" y1="90" x2="157" y2="90" stroke="#88c030" stroke-width="1.2" stroke-opacity="0.38"/>
-<line x1="138" y1="123" x2="142" y2="127" stroke="#88c030" stroke-width="1.2" stroke-opacity="0.38"/>
-<line x1="107" y1="136" x2="107" y2="142" stroke="#88c030" stroke-width="1.2" stroke-opacity="0.38"/>
-<line x1="76" y1="123" x2="72" y2="127" stroke="#88c030" stroke-width="1.2" stroke-opacity="0.38"/>
-<line x1="63" y1="90" x2="57" y2="90" stroke="#88c030" stroke-width="1.2" stroke-opacity="0.38"/>
-<line x1="76" y1="57" x2="72" y2="53" stroke="#88c030" stroke-width="1.2" stroke-opacity="0.38"/>
-<path d="M107 84 L110 90 L107 96 L104 90 Z" fill="none" stroke="#88c030" stroke-width="0.7" stroke-opacity="0.22"/>
-<path d="M105 48 C95 44 84 46 78 54 C72 62 70 74 72 86 C74 96 78 104 82 110 C76 108 68 100 64 86 C60 72 62 58 70 48 C78 38 94 36 104 42 Z" fill="#040602"/>
-<path d="M105 48 C94 48 86 53 82 62 C78 72 78 83 82 91 C84 97 88 103 93 107 C97 110 100 112 104 110 C108 108 112 105 115 100 C118 93 118 84 116 74 C113 62 110 52 105 48 Z" fill="#040602"/>
-<path d="M115 68 C120 66 122 70 122 76 C122 80 120 82 118 80 C115 78 115 70 115 68 Z" fill="#040602"/>
-<path d="M82 74 C80 77 79 80 80 84 C82 86 84 84 84 80" fill="#040602"/>
-<path d="M88 110 C86 118 86 126 88 132 C90 136 94 138 100 138 C106 138 110 136 112 132 C114 126 114 118 112 110 C108 108 104 108 100 108 C96 108 92 108 88 110 Z" fill="#040602"/>
-<path d="M46 232 C44 200 56 174 78 160 C86 156 92 154 100 152 C110 154 122 158 132 164 C154 176 164 202 162 232 Z" fill="#040602"/>
-<path d="M44 256 L46 232 L162 232 L166 256 Z" fill="#040602"/>
-<path d="M82 62 C78 72 78 83 82 91 C84 97 88 103 93 107" fill="none" stroke="#88c030" stroke-width="0.8" stroke-opacity="0.20"/>
-<path d="M46 232 C44 200 56 174 78 160" fill="none" stroke="#88c030" stroke-width="0.5" stroke-opacity="0.13"/>
-<ellipse cx="100" cy="248" rx="88" ry="18" fill="#040602" fill-opacity="0.70"/>
-<rect x="7" y="7" width="186" height="256" fill="none" stroke="#88c030" stroke-width="2" stroke-opacity="0.07"/>
-<rect x="9" y="9" width="182" height="252" fill="none" stroke="#88c030" stroke-width="1.1" stroke-opacity="0.38"/>
-<rect x="13" y="13" width="174" height="244" fill="none" stroke="#88c030" stroke-width="0.4" stroke-opacity="0.15"/>
-<path d="M9 9 L9 28 M9 9 L28 9" stroke="#88c030" stroke-width="2" stroke-opacity="0.68" fill="none" stroke-linecap="round"/>
-<circle cx="9" cy="9" r="2.8" fill="#88c030" fill-opacity="0.40"/>
-<path d="M191 9 L191 28 M191 9 L172 9" stroke="#88c030" stroke-width="2" stroke-opacity="0.68" fill="none" stroke-linecap="round"/>
-<circle cx="191" cy="9" r="2.8" fill="#88c030" fill-opacity="0.40"/>
-<path d="M9 261 L9 242 M9 261 L28 261" stroke="#88c030" stroke-width="2" stroke-opacity="0.68" fill="none" stroke-linecap="round"/>
-<circle cx="9" cy="261" r="2.8" fill="#88c030" fill-opacity="0.40"/>
-<path d="M191 261 L191 242 M191 261 L172 261" stroke="#88c030" stroke-width="2" stroke-opacity="0.68" fill="none" stroke-linecap="round"/>
-<circle cx="191" cy="261" r="2.8" fill="#88c030" fill-opacity="0.40"/>
-<path d="M100 7 L103 10 L100 13 L97 10 Z" fill="#88c030" fill-opacity="0.42"/>
-<path d="M100 257 L103 260 L100 263 L97 260 Z" fill="#88c030" fill-opacity="0.42"/>
-<path d="M7 135 L10 138 L7 141 L4 138 Z" fill="#88c030" fill-opacity="0.42"/>
-<path d="M193 135 L196 138 L193 141 L190 138 Z" fill="#88c030" fill-opacity="0.42"/>
+<!-- rune circle behind head, cx=105 cy=82 r=50 -->
+<circle cx="105" cy="82" r="53" fill="none" stroke="#88c030" stroke-width="3" stroke-opacity="0.06"/>
+<circle cx="105" cy="82" r="50" fill="none" stroke="#88c030" stroke-width="1" stroke-opacity="0.28"/>
+<circle cx="105" cy="82" r="43" fill="none" stroke="#88c030" stroke-width="0.5" stroke-opacity="0.15"/>
+<line x1="105" y1="33" x2="105" y2="27" stroke="#88c030" stroke-width="1.4" stroke-opacity="0.42"/>
+<line x1="140" y1="47" x2="144" y2="43" stroke="#88c030" stroke-width="1.4" stroke-opacity="0.42"/>
+<line x1="153" y1="82" x2="159" y2="82" stroke="#88c030" stroke-width="1.4" stroke-opacity="0.42"/>
+<line x1="140" y1="117" x2="144" y2="121" stroke="#88c030" stroke-width="1.4" stroke-opacity="0.42"/>
+<line x1="105" y1="131" x2="105" y2="137" stroke="#88c030" stroke-width="1.4" stroke-opacity="0.42"/>
+<line x1="70" y1="117" x2="66" y2="121" stroke="#88c030" stroke-width="1.4" stroke-opacity="0.42"/>
+<line x1="57" y1="82" x2="51" y2="82" stroke="#88c030" stroke-width="1.4" stroke-opacity="0.42"/>
+<line x1="70" y1="47" x2="66" y2="43" stroke="#88c030" stroke-width="1.4" stroke-opacity="0.42"/>
+<path d="M105 76 L109 82 L105 88 L101 82 Z" fill="none" stroke="#88c030" stroke-width="0.8" stroke-opacity="0.26"/>
+<!-- ornate frame -->
+<rect x="7" y="7" width="186" height="256" fill="none" stroke="#88c030" stroke-width="2.2" stroke-opacity="0.08"/>
+<rect x="9" y="9" width="182" height="252" fill="none" stroke="#88c030" stroke-width="1.2" stroke-opacity="0.40"/>
+<rect x="13" y="13" width="174" height="244" fill="none" stroke="#88c030" stroke-width="0.5" stroke-opacity="0.16"/>
+<path d="M9 9 L9 30 M9 9 L30 9" stroke="#88c030" stroke-width="2.2" stroke-opacity="0.72" fill="none" stroke-linecap="round"/>
+<circle cx="9" cy="9" r="3" fill="#88c030" fill-opacity="0.45"/>
+<path d="M191 9 L191 30 M191 9 L170 9" stroke="#88c030" stroke-width="2.2" stroke-opacity="0.72" fill="none" stroke-linecap="round"/>
+<circle cx="191" cy="9" r="3" fill="#88c030" fill-opacity="0.45"/>
+<path d="M9 261 L9 240 M9 261 L30 261" stroke="#88c030" stroke-width="2.2" stroke-opacity="0.72" fill="none" stroke-linecap="round"/>
+<circle cx="9" cy="261" r="3" fill="#88c030" fill-opacity="0.45"/>
+<path d="M191 261 L191 240 M191 261 L170 261" stroke="#88c030" stroke-width="2.2" stroke-opacity="0.72" fill="none" stroke-linecap="round"/>
+<circle cx="191" cy="261" r="3" fill="#88c030" fill-opacity="0.45"/>
+<path d="M100 7 L104 11 L100 15 L96 11 Z" fill="#88c030" fill-opacity="0.45"/>
+<path d="M100 255 L104 259 L100 263 L96 259 Z" fill="#88c030" fill-opacity="0.45"/>
+<path d="M7 135 L11 139 L7 143 L3 139 Z" fill="#88c030" fill-opacity="0.45"/>
+<path d="M193 135 L197 139 L193 143 L189 139 Z" fill="#88c030" fill-opacity="0.45"/>
+
+<!-- hair mass (fluffy, round) -->
+<ellipse cx="102" cy="86" rx="30" ry="36" fill="#040602"/>
+<!-- head oval (rounder, slightly smaller) -->
+<ellipse cx="106" cy="90" rx="25" ry="29" fill="#040602"/>
+<!-- round ear (slightly large) -->
+<ellipse cx="129" cy="90" rx="8" ry="11" fill="#040602"/>
+<!-- chubby cheek hint -->
+<path d="M84 98 C80 103 79 108 81 112 C83 114 86 112 86 108" fill="#040602"/>
+<!-- neck -->
+<rect x="93" y="117" width="26" height="22" rx="7" fill="#040602"/>
+<!-- shoulders (softer) -->
+<path d="M40 234 Q44 178 78 162 Q92 156 106 154 Q120 156 126 162 Q158 178 162 234 Z" fill="#040602"/>
+<!-- rim light -->
+<path d="M84 68 C80 78 80 90 84 100 C86 106 90 112 95 116" fill="none" stroke="#88c030" stroke-width="1.2" stroke-opacity="0.28"/>
+<ellipse cx="100" cy="250" rx="86" ry="14" fill="#030201" fill-opacity="0.65"/>
 <rect width="200" height="270" fill="url(#vig)"/>
 </svg>
