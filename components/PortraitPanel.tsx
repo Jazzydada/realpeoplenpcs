@@ -113,47 +113,52 @@ function PortraitPanel({ character, imageUrl, isLoadingImage, imageStartedAt, qu
         </div>
       )}
 
-      {/* ── Loading overlay (semi-transparent so placeholder shows through) */}
+      {/* ── Loading overlay — very light so placeholder shows through clearly */}
       <AnimatePresence>
         {showLoading && (
           <motion.div key="loading" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-            className="absolute inset-0 flex flex-col items-center justify-center gap-5"
-            style={{ background: 'rgba(4,3,2,0.75)', zIndex: 5 }}
+            className="absolute inset-0" style={{ zIndex: 5 }}
           >
-            <div className="relative w-28 h-28">
-              {LOADING_RUNES.map((rune, i) => {
-                const rad = ((i / LOADING_RUNES.length) * 360 * Math.PI) / 180
-                return (
-                  <motion.span key={i} animate={{ opacity: [0.15, 0.7, 0.15] }}
-                    transition={{ duration: 2.2, delay: i * 0.16, repeat: Infinity }}
-                    className="absolute font-cinzel"
-                    style={{ left: `${50 + 40 * Math.cos(rad)}%`, top: `${50 + 40 * Math.sin(rad)}%`, transform: 'translate(-50%,-50%)', fontSize: '0.7rem', color: 'rgba(201,168,76,0.65)' }}
-                  >{rune}</motion.span>
-                )
-              })}
-              <motion.div animate={{ rotate: 360 }} transition={{ duration: 9, repeat: Infinity, ease: 'linear' }}
-                className="absolute inset-2 rounded-full" style={{ border: '1px solid rgba(201,168,76,0.22)' }} />
-              <motion.div animate={{ rotate: -360 }} transition={{ duration: 6, repeat: Infinity, ease: 'linear' }}
-                className="absolute inset-6 rounded-full" style={{ border: '1px solid rgba(201,168,76,0.14)' }} />
+            {/* Subtle top veil — placeholder stays readable */}
+            <div className="absolute inset-0" style={{ background: 'rgba(4,3,2,0.28)' }} />
+            {/* Rune wheel — small, top-center, non-obtrusive */}
+            <div className="absolute left-1/2 top-6" style={{ transform: 'translateX(-50%)' }}>
+              <div className="relative" style={{ width: 48, height: 48 }}>
+                {LOADING_RUNES.slice(0, 8).map((rune, i) => {
+                  const rad = ((i / 8) * 360 * Math.PI) / 180
+                  return (
+                    <motion.span key={i} animate={{ opacity: [0.10, 0.55, 0.10] }}
+                      transition={{ duration: 2.4, delay: i * 0.20, repeat: Infinity }}
+                      className="absolute font-cinzel"
+                      style={{ left: `${50 + 40 * Math.cos(rad)}%`, top: `${50 + 40 * Math.sin(rad)}%`, transform: 'translate(-50%,-50%)', fontSize: '0.55rem', color: 'rgba(201,168,76,0.55)' }}
+                    >{rune}</motion.span>
+                  )
+                })}
+                <motion.div animate={{ rotate: 360 }} transition={{ duration: 9, repeat: Infinity, ease: 'linear' }}
+                  className="absolute inset-1 rounded-full" style={{ border: '1px solid rgba(201,168,76,0.18)' }} />
+              </div>
             </div>
-            <div className="text-center">
-              <p className="font-cinzel tracking-widest" style={{ fontSize: '0.6rem', color: 'rgba(201,168,76,0.55)' }}>
+            {/* Status text + progress bar — bottom of portrait */}
+            <div className="absolute inset-x-0 bottom-0 px-3 pb-3 pt-6"
+              style={{ background: 'linear-gradient(to top, rgba(4,3,2,0.82) 0%, transparent 100%)' }}
+            >
+              <p className="font-cinzel tracking-widest text-center" style={{ fontSize: '0.55rem', color: 'rgba(201,168,76,0.55)' }}>
                 {elapsed < estimate ? statusText('loading') : statusText('queued')}
               </p>
-              <div className="mt-3 h-px w-40 overflow-hidden" style={{ background: 'rgba(201,168,76,0.15)' }}>
-                <div style={{ width: `${progress}%`, height: '100%', background: 'rgba(201,168,76,0.52)', transition: 'width 0.35s ease' }} />
+              <div className="mt-2 h-px overflow-hidden mx-auto" style={{ background: 'rgba(201,168,76,0.14)', width: 120 }}>
+                <div style={{ width: `${progress}%`, height: '100%', background: 'rgba(201,168,76,0.48)', transition: 'width 0.35s ease' }} />
               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* ── Error state — placeholder remains visible, text overlays ──── */}
+      {/* ── Error state — placeholder remains visible, subtle text at bottom */}
       {imgError && character && (
-        <div className="absolute inset-x-0 bottom-0 flex items-center justify-center pb-4 pt-2"
-          style={{ background: 'linear-gradient(to top, rgba(4,3,2,0.88) 0%, transparent 100%)', zIndex: 6 }}
+        <div className="absolute inset-x-0 bottom-0 px-3 pb-3 pt-6"
+          style={{ background: 'linear-gradient(to top, rgba(4,3,2,0.80) 0%, transparent 100%)', zIndex: 6 }}
         >
-          <p className="font-crimson italic text-center" style={{ fontSize: '0.68rem', color: 'rgba(201,168,76,0.55)', maxWidth: '160px', lineHeight: 1.4 }}>
+          <p className="font-crimson italic text-center" style={{ fontSize: '0.62rem', color: 'rgba(201,168,76,0.48)', lineHeight: 1.4 }}>
             {statusText('error')}
           </p>
         </div>

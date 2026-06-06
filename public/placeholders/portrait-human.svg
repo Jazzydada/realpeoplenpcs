@@ -1,40 +1,67 @@
 <svg viewBox="0 0 200 270" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <radialGradient id="bg" cx="52%" cy="35%" r="68%">
-      <stop offset="0%" stop-color="#201408"/>
-      <stop offset="100%" stop-color="#080502"/>
-    </radialGradient>
-  </defs>
-  <rect width="200" height="270" fill="url(#bg)"/>
-  <!-- outer frame -->
-  <rect x="10" y="10" width="180" height="250" fill="none" stroke="#c89828" stroke-width="0.9" stroke-opacity="0.30"/>
-  <rect x="14" y="14" width="172" height="242" fill="none" stroke="#c89828" stroke-width="0.4" stroke-opacity="0.14"/>
-  <!-- corner ornaments -->
-  <path d="M10 10 L10 24 M10 10 L24 10" stroke="#c89828" stroke-width="1.6" stroke-opacity="0.60" fill="none" stroke-linecap="round"/>
-  <path d="M190 10 L190 24 M190 10 L176 10" stroke="#c89828" stroke-width="1.6" stroke-opacity="0.60" fill="none" stroke-linecap="round"/>
-  <path d="M10 260 L10 246 M10 260 L24 260" stroke="#c89828" stroke-width="1.6" stroke-opacity="0.60" fill="none" stroke-linecap="round"/>
-  <path d="M190 260 L190 246 M190 260 L176 260" stroke="#c89828" stroke-width="1.6" stroke-opacity="0.60" fill="none" stroke-linecap="round"/>
-  <!-- arcane circles -->
-  <circle cx="100" cy="148" r="80" fill="none" stroke="#c89828" stroke-width="0.6" stroke-opacity="0.14"/>
-  <circle cx="100" cy="148" r="64" fill="none" stroke="#c89828" stroke-width="0.4" stroke-opacity="0.09"/>
-  <line x1="100.0" y1="68.0" x2="100.0" y2="76.0" stroke="#c89828" stroke-width="0.9" stroke-opacity="0.28"/><line x1="156.6" y1="91.4" x2="150.9" y2="97.1" stroke="#c89828" stroke-width="0.9" stroke-opacity="0.28"/><line x1="180.0" y1="148.0" x2="172.0" y2="148.0" stroke="#c89828" stroke-width="0.9" stroke-opacity="0.28"/><line x1="156.6" y1="204.6" x2="150.9" y2="198.9" stroke="#c89828" stroke-width="0.9" stroke-opacity="0.28"/><line x1="100.0" y1="228.0" x2="100.0" y2="220.0" stroke="#c89828" stroke-width="0.9" stroke-opacity="0.28"/><line x1="43.4" y1="204.6" x2="49.1" y2="198.9" stroke="#c89828" stroke-width="0.9" stroke-opacity="0.28"/><line x1="20.0" y1="148.0" x2="28.0" y2="148.0" stroke="#c89828" stroke-width="0.9" stroke-opacity="0.28"/><line x1="43.4" y1="91.4" x2="49.1" y2="97.1" stroke="#c89828" stroke-width="0.9" stroke-opacity="0.28"/>
-  <circle cx="100" cy="114" r="22" fill="none" stroke="#c89828" stroke-width="0.8" stroke-opacity="0.2"/><path d="M100 92 L104 110 L100 114 L96 110 Z M100 136 L104 118 L100 114 L96 118 Z M78 114 L96 110 L100 114 L96 118 Z M122 114 L104 110 L100 114 L104 118 Z" fill="#c89828" fill-opacity="0.15000000000000002" stroke="#c89828" stroke-width="0.5" stroke-opacity="0.2"/>
-  
-  <!-- hair flowing behind -->
-  <path d="M100 34 C90 30 78 32 72 40 C66 50 64 64 66 78 C68 88 72 96 76 102 C70 100 62 94 58 82 C54 68 56 52 64 40 C72 28 86 26 96 30 Z" fill="rgba(3,2,1,0.97)"/>
-  <!-- head profile (facing left) -->
-  <path d="M100 34 C88 34 78 40 74 50 C70 60 70 72 74 80 C76 86 80 92 84 96 C88 100 92 102 96 102 C100 102 104 100 108 96 C112 90 114 82 112 72 C110 60 106 46 100 34 Z" fill="rgba(3,2,1,0.97)"/>
-  <!-- nose -->
-  <path d="M74 62 C72 66 70 70 72 74 C74 76 76 74 76 70" fill="rgba(3,2,1,0.97)"/>
-  <!-- ear -->
-  <path d="M108 58 C112 58 114 62 114 66 C114 70 112 72 110 72 C108 70 108 62 108 58 Z" fill="rgba(3,2,1,0.97)"/>
-  <!-- neck -->
-  <path d="M84 102 C82 108 82 116 84 122 C86 126 90 128 96 128 C102 128 106 126 108 122 C110 116 110 108 108 102 C104 100 100 100 96 100 C92 100 88 100 84 102 Z" fill="rgba(3,2,1,0.97)"/>
-  <!-- shoulders and torso -->
-  <path d="M40 200 C38 170 50 148 72 138 C80 134 86 132 96 130 C106 132 116 136 126 140 C148 150 158 172 160 200 Z" fill="rgba(3,2,1,0.97)"/>
-  <!-- pauldron near side -->
-  <path d="M40 200 L36 228 L164 228 L160 200 Z" fill="rgba(5,3,1,0.88)"/>
-  <!-- hair detail -->
-  <path d="M66 78 C60 90 58 104 62 116 C64 122 66 124 68 120 C64 108 64 96 68 84" fill="rgba(3,2,1,0.97)"/>
-  <text x="100" y="254" text-anchor="middle" font-family="Georgia,serif" font-size="7" letter-spacing="2.5" fill="#c89828" fill-opacity="0.50">HUMAN</text>
+<defs>
+  <radialGradient id="bg" cx="53%" cy="30%" r="75%">
+    <stop offset="0%" stop-color="#281608"/>
+    <stop offset="45%" stop-color="#130b04"/>
+    <stop offset="100%" stop-color="#060402"/>
+  </radialGradient>
+  <radialGradient id="atm" cx="53%" cy="32%" r="36%">
+    <stop offset="0%" stop-color="#c89828" stop-opacity="0.13"/>
+    <stop offset="100%" stop-color="#c89828" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="vig" cx="50%" cy="42%" r="62%">
+    <stop offset="40%" stop-color="transparent"/>
+    <stop offset="100%" stop-color="#030201" stop-opacity="0.88"/>
+  </radialGradient>
+</defs>
+<rect width="200" height="270" fill="url(#bg)"/>
+<rect width="200" height="270" fill="url(#atm)"/>
+<!-- rune circle behind head -->
+<circle cx="107" cy="82" r="54" fill="none" stroke="#c89828" stroke-width="3" stroke-opacity="0.05"/>
+<circle cx="107" cy="82" r="51" fill="none" stroke="#c89828" stroke-width="0.9" stroke-opacity="0.26"/>
+<circle cx="107" cy="82" r="44" fill="none" stroke="#c89828" stroke-width="0.45" stroke-opacity="0.14"/>
+<line x1="107" y1="33" x2="107" y2="27" stroke="#c89828" stroke-width="1.2" stroke-opacity="0.40"/>
+<line x1="141" y1="48" x2="145" y2="44" stroke="#c89828" stroke-width="1.2" stroke-opacity="0.40"/>
+<line x1="155" y1="82" x2="161" y2="82" stroke="#c89828" stroke-width="1.2" stroke-opacity="0.40"/>
+<line x1="141" y1="116" x2="145" y2="120" stroke="#c89828" stroke-width="1.2" stroke-opacity="0.40"/>
+<line x1="107" y1="131" x2="107" y2="137" stroke="#c89828" stroke-width="1.2" stroke-opacity="0.40"/>
+<line x1="73" y1="116" x2="69" y2="120" stroke="#c89828" stroke-width="1.2" stroke-opacity="0.40"/>
+<line x1="59" y1="82" x2="53" y2="82" stroke="#c89828" stroke-width="1.2" stroke-opacity="0.40"/>
+<line x1="73" y1="48" x2="69" y2="44" stroke="#c89828" stroke-width="1.2" stroke-opacity="0.40"/>
+<path d="M107 76 L111 82 L107 88 L103 82 Z" fill="none" stroke="#c89828" stroke-width="0.7" stroke-opacity="0.24"/>
+<!-- hair flowing back -->
+<path d="M100 34 C90 28 76 32 70 42 C64 52 62 66 64 80 C66 92 70 100 74 106 C68 104 60 96 56 82 C52 66 54 50 62 38 C70 26 86 24 96 30 Z" fill="#060402"/>
+<!-- head profile (3/4 facing left) -->
+<path d="M100 34 C88 34 78 40 74 50 C70 60 70 72 74 80 C76 86 80 92 84 96 C88 100 92 102 96 102 C100 102 104 100 108 96 C112 90 114 82 112 72 C110 60 106 46 100 34 Z" fill="#090604"/>
+<!-- nose -->
+<path d="M74 60 C72 64 70 68 72 73 C74 76 76 74 76 70" fill="#090604"/>
+<!-- ear -->
+<path d="M108 60 C112 58 114 62 114 68 C114 72 112 74 110 72 C108 70 108 62 108 60 Z" fill="#090604"/>
+<!-- neck -->
+<path d="M84 102 C82 110 82 118 84 124 C86 128 90 130 96 130 C102 130 106 128 108 124 C110 118 110 110 108 102 C104 100 100 100 96 100 C92 100 88 100 84 102 Z" fill="#070402"/>
+<!-- shoulders -->
+<path d="M38 232 C36 196 50 170 74 156 C82 152 88 150 96 148 C106 150 118 154 128 160 C152 174 164 198 164 232 Z" fill="#070502"/>
+<path d="M36 256 L38 232 L164 232 L166 256 Z" fill="#060401"/>
+<!-- rim light face edge -->
+<path d="M74 50 C70 60 70 72 74 80 C76 86 80 92 84 96" fill="none" stroke="#c89828" stroke-width="0.8" stroke-opacity="0.20"/>
+<path d="M38 232 C36 196 50 170 74 156" fill="none" stroke="#c89828" stroke-width="0.5" stroke-opacity="0.14"/>
+<!-- bottom fog -->
+<ellipse cx="100" cy="248" rx="88" ry="18" fill="#030201" fill-opacity="0.70"/>
+<!-- frame -->
+<rect x="7" y="7" width="186" height="256" fill="none" stroke="#c89828" stroke-width="2" stroke-opacity="0.07"/>
+<rect x="9" y="9" width="182" height="252" fill="none" stroke="#c89828" stroke-width="1.1" stroke-opacity="0.38"/>
+<rect x="13" y="13" width="174" height="244" fill="none" stroke="#c89828" stroke-width="0.4" stroke-opacity="0.15"/>
+<path d="M9 9 L9 28 M9 9 L28 9" stroke="#c89828" stroke-width="2" stroke-opacity="0.68" fill="none" stroke-linecap="round"/>
+<circle cx="9" cy="9" r="2.8" fill="#c89828" fill-opacity="0.40"/>
+<path d="M191 9 L191 28 M191 9 L172 9" stroke="#c89828" stroke-width="2" stroke-opacity="0.68" fill="none" stroke-linecap="round"/>
+<circle cx="191" cy="9" r="2.8" fill="#c89828" fill-opacity="0.40"/>
+<path d="M9 261 L9 242 M9 261 L28 261" stroke="#c89828" stroke-width="2" stroke-opacity="0.68" fill="none" stroke-linecap="round"/>
+<circle cx="9" cy="261" r="2.8" fill="#c89828" fill-opacity="0.40"/>
+<path d="M191 261 L191 242 M191 261 L172 261" stroke="#c89828" stroke-width="2" stroke-opacity="0.68" fill="none" stroke-linecap="round"/>
+<circle cx="191" cy="261" r="2.8" fill="#c89828" fill-opacity="0.40"/>
+<path d="M100 7 L103 10 L100 13 L97 10 Z" fill="#c89828" fill-opacity="0.42"/>
+<path d="M100 257 L103 260 L100 263 L97 260 Z" fill="#c89828" fill-opacity="0.42"/>
+<path d="M7 135 L10 138 L7 141 L4 138 Z" fill="#c89828" fill-opacity="0.42"/>
+<path d="M193 135 L196 138 L193 141 L190 138 Z" fill="#c89828" fill-opacity="0.42"/>
+<rect width="200" height="270" fill="url(#vig)"/>
 </svg>

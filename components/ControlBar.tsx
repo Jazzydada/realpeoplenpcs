@@ -2,7 +2,7 @@
 
 import { memo, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Wand2, Image, Download, Bookmark, BookOpen, Loader2 } from 'lucide-react'
+import { Wand2, Image, Download, Bookmark, BookOpen, Loader2, Eye, EyeOff } from 'lucide-react'
 import { t, type Lang } from '@/lib/i18n'
 
 interface Props {
@@ -20,6 +20,8 @@ interface Props {
   savedCount: number
   quality: 'fast' | 'high'
   onQualityChange: (q: 'fast' | 'high') => void
+  usePortraits: boolean
+  onPortraitsToggle: () => void
   level: number
   onLevelChange: (level: number) => void
   imageStyle: string
@@ -77,7 +79,7 @@ function Btn({ onClick, disabled, loading, icon, label, primary, title }: BtnPro
 function ControlBar({
   onGenerate, onGeneratePortrait, onRegenerateImage, onExport, onSave, onShowSaved,
   isGenerating, isLoadingImage, exportingPng, hasCharacter, hasPortrait, savedCount,
-  onQualityChange, level, onLevelChange, onImageStyleChange, onPortraitTypeChange,
+  onQualityChange, usePortraits, onPortraitsToggle, level, onLevelChange, onImageStyleChange, onPortraitTypeChange,
   lang = 'da', onLangChange,
 }: Props) {
   // START: v11 locked image settings
@@ -104,10 +106,31 @@ function ControlBar({
           Only "Nyt portræt" is locked while a portrait is in flight. */}
       <Btn onClick={onGenerate} disabled={false} loading={false} icon={<Wand2 size={11} />} label={t(lang, 'generate')} primary title={t(lang, 'generate')} />
 
-      {/* START PORTRAIT ON DEMAND SYSTEM
-          Show "Lav portræt" when no portrait exists, "Nyt portræt" when one does.
-          Both are disabled while a portrait is loading. */}
-      {!hasPortrait ? (
+      {/* Portrait mode toggle */}
+      <motion.button
+        whileHover={{ scale: 1.035, y: -1 }}
+        whileTap={{ scale: 0.97 }}
+        onClick={onPortraitsToggle}
+        title={t(lang, usePortraits ? 'portraitOn' : 'portraitOff')}
+        className="flex items-center gap-1.5 px-3 py-1.5 font-cinzel tracking-widest uppercase transition-colors"
+        style={{
+          fontSize: '0.6rem',
+          background: usePortraits
+            ? 'linear-gradient(135deg, rgba(201,168,76,0.12), rgba(160,110,20,0.16))'
+            : 'rgba(13,11,7,0.85)',
+          border: `1px solid ${usePortraits ? 'rgba(201,168,76,0.40)' : 'rgba(201,168,76,0.15)'}`,
+          color: usePortraits ? 'rgba(201,168,76,0.75)' : 'rgba(201,168,76,0.30)',
+          backdropFilter: 'blur(6px)',
+          letterSpacing: '0.14em',
+          cursor: 'pointer',
+        }}
+      >
+        {usePortraits ? <Eye size={11} /> : <EyeOff size={11} />}
+        <span className="hidden sm:inline">{t(lang, usePortraits ? 'portraitOn' : 'portraitOff')}</span>
+      </motion.button>
+
+      {/* START PORTRAIT ON DEMAND SYSTEM */}
+      {usePortraits && (!hasPortrait ? (
         <Btn
           onClick={onGeneratePortrait}
           disabled={!hasCharacter || isLoadingImage}
@@ -126,7 +149,7 @@ function ControlBar({
           label={t(lang, 'newPortrait')}
           title={t(lang, 'newPortrait')}
         />
-      )}
+      ))}
       {/* END PORTRAIT ON DEMAND SYSTEM */}
 
       <div

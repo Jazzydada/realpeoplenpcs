@@ -51,6 +51,10 @@ const LABELS: Record<string, Record<Lang, string>> = {
   rollCombat:         { da: 'Kampdata',            en: 'Combat' },
   rollLabel:          { da: 'Rul om:',             en: 'Reroll:' },
 
+  // Portrait mode toggle
+  portraitOn:         { da: 'Portræt: til',            en: 'Portrait: on' },
+  portraitOff:        { da: 'Portræt: fra',            en: 'Portrait: off' },
+
   // Header subtitle
   subtitle:           { da: 'NPC-generator med portræt, stats og spilbare hemmeligheder', en: 'NPC generator with portrait, stats and playable secrets' },
 

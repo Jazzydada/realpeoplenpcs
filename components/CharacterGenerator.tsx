@@ -314,9 +314,24 @@ export default function CharacterGenerator() {
   const [imageStyle,     setImageStyle]     = useState('Cinematic')
   const [portraitType,   setPortraitType]   = useState('Three Quarter')
   const [lang,           setLang]           = useState<Lang>('da')
+  const [usePortraits,   setUsePortraits]   = useState(true)
 
   const cardRef      = useRef<HTMLDivElement>(null)
   const pendingCache = useRef<{ key: string; url: string } | null>(null)
+
+  // Persist portrait mode preference
+  useEffect(() => {
+    if (localStorage.getItem('rpg-portrait-mode') === 'off') setUsePortraits(false)
+  }, [])
+
+  const handlePortraitsToggle = useCallback(() => {
+    setUsePortraits(prev => {
+      const next = !prev
+      localStorage.setItem('rpg-portrait-mode', next ? 'on' : 'off')
+      if (!next && portraitAbortRef.current) portraitAbortRef.current.abort()
+      return next
+    })
+  }, [])
 
   // START I18N SYSTEM
   // Persist the Danish/English UI choice. Image prompts remain English; NPC text
@@ -472,13 +487,12 @@ export default function CharacterGenerator() {
   const triggerImageRef = useRef(triggerImage)
   useEffect(() => { triggerImageRef.current = triggerImage }, [triggerImage])
   useEffect(() => {
-    if (!character || autoPortraitFired.current) return
+    if (!character || autoPortraitFired.current || !usePortraits) return
     autoPortraitFired.current = true
-    // Small delay to ensure all state (quality, imageStyle etc.) has settled
     const id = setTimeout(() => triggerImageRef.current(character, quality, true), 50)
     return () => clearTimeout(id)
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [character])
+  }, [character, usePortraits])
 
   useEffect(() => {
     const id = requestAnimationFrame(() => {
@@ -494,9 +508,9 @@ export default function CharacterGenerator() {
 
   // Explicit portrait generation — only called when user clicks "Lav portræt" / "Nyt portræt"
   const handleGeneratePortrait = useCallback(() => {
-    if (!character || isLoadingImage) return
+    if (!character || isLoadingImage || !usePortraits) return
     triggerImage(character, quality, true)
-  }, [character, isLoadingImage, quality, triggerImage])
+  }, [character, isLoadingImage, quality, triggerImage, usePortraits])
 
   // "Nyt portræt" = force-new portrait for current character
   const handleRegenerateImage = useCallback(() => {
@@ -709,6 +723,8 @@ export default function CharacterGenerator() {
           savedCount={savedCharacters.length}
           quality={quality}
           onQualityChange={setQuality}
+          usePortraits={usePortraits}
+          onPortraitsToggle={handlePortraitsToggle}
           level={character?.level ?? 1}
           onLevelChange={handleLevelChange}
           imageStyle={imageStyle}
