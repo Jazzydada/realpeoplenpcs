@@ -1,71 +1,64 @@
 <svg viewBox="0 0 200 270" xmlns="http://www.w3.org/2000/svg">
 <defs>
-  <radialGradient id="bg" cx="53%" cy="30%" r="75%">
-    <stop offset="0%" stop-color="#082018"/>
-    <stop offset="50%" stop-color="#04100c"/>
-    <stop offset="100%" stop-color="#040302"/>
+  <radialGradient id="bg" cx="50%" cy="36%" r="70%">
+    <stop offset="0%" stop-color="#061e16"/>
+    <stop offset="52%" stop-color="#04100c"/>
+    <stop offset="100%" stop-color="#060402"/>
   </radialGradient>
-  <radialGradient id="atm" cx="53%" cy="32%" r="42%">
-    <stop offset="0%" stop-color="#60c090" stop-opacity="0.38"/>
+  <radialGradient id="atm" cx="50%" cy="34%" r="50%">
+    <stop offset="0%" stop-color="#60c090" stop-opacity="0.44"/>
     <stop offset="100%" stop-color="#60c090" stop-opacity="0"/>
   </radialGradient>
-  <radialGradient id="vig" cx="50%" cy="44%" r="65%">
-    <stop offset="35%" stop-color="transparent"/>
-    <stop offset="100%" stop-color="#020101" stop-opacity="0.55"/>
+  <radialGradient id="vign" cx="50%" cy="46%" r="66%">
+    <stop offset="28%" stop-color="transparent"/>
+    <stop offset="100%" stop-color="#030201" stop-opacity="0.60"/>
   </radialGradient>
+  <filter id="grain">
+    <feTurbulence type="fractalNoise" baseFrequency="0.68" numOctaves="3" stitchTiles="stitch" result="n"/>
+    <feColorMatrix type="saturate" values="0" in="n" result="g"/>
+    <feBlend in="SourceGraphic" in2="g" mode="multiply"/>
+  </filter>
 </defs>
 <rect width="200" height="270" fill="url(#bg)"/>
 <rect width="200" height="270" fill="url(#atm)"/>
-<!-- rune circle behind head, cx=105 cy=82 r=50 -->
-<circle cx="105" cy="82" r="53" fill="none" stroke="#60c090" stroke-width="3" stroke-opacity="0.06"/>
-<circle cx="105" cy="82" r="50" fill="none" stroke="#60c090" stroke-width="1" stroke-opacity="0.28"/>
-<circle cx="105" cy="82" r="43" fill="none" stroke="#60c090" stroke-width="0.5" stroke-opacity="0.15"/>
-<line x1="105" y1="33" x2="105" y2="27" stroke="#60c090" stroke-width="1.4" stroke-opacity="0.42"/>
-<line x1="140" y1="47" x2="144" y2="43" stroke="#60c090" stroke-width="1.4" stroke-opacity="0.42"/>
-<line x1="153" y1="82" x2="159" y2="82" stroke="#60c090" stroke-width="1.4" stroke-opacity="0.42"/>
-<line x1="140" y1="117" x2="144" y2="121" stroke="#60c090" stroke-width="1.4" stroke-opacity="0.42"/>
-<line x1="105" y1="131" x2="105" y2="137" stroke="#60c090" stroke-width="1.4" stroke-opacity="0.42"/>
-<line x1="70" y1="117" x2="66" y2="121" stroke="#60c090" stroke-width="1.4" stroke-opacity="0.42"/>
-<line x1="57" y1="82" x2="51" y2="82" stroke="#60c090" stroke-width="1.4" stroke-opacity="0.42"/>
-<line x1="70" y1="47" x2="66" y2="43" stroke="#60c090" stroke-width="1.4" stroke-opacity="0.42"/>
-<path d="M105 76 L109 82 L105 88 L101 82 Z" fill="none" stroke="#60c090" stroke-width="0.8" stroke-opacity="0.26"/>
-<!-- ornate frame -->
-<rect x="7" y="7" width="186" height="256" fill="none" stroke="#60c090" stroke-width="2.2" stroke-opacity="0.08"/>
-<rect x="9" y="9" width="182" height="252" fill="none" stroke="#60c090" stroke-width="1.2" stroke-opacity="0.40"/>
-<rect x="13" y="13" width="174" height="244" fill="none" stroke="#60c090" stroke-width="0.5" stroke-opacity="0.16"/>
-<path d="M9 9 L9 30 M9 9 L30 9" stroke="#60c090" stroke-width="2.2" stroke-opacity="0.72" fill="none" stroke-linecap="round"/>
-<circle cx="9" cy="9" r="3" fill="#60c090" fill-opacity="0.45"/>
-<path d="M191 9 L191 30 M191 9 L170 9" stroke="#60c090" stroke-width="2.2" stroke-opacity="0.72" fill="none" stroke-linecap="round"/>
-<circle cx="191" cy="9" r="3" fill="#60c090" fill-opacity="0.45"/>
-<path d="M9 261 L9 240 M9 261 L30 261" stroke="#60c090" stroke-width="2.2" stroke-opacity="0.72" fill="none" stroke-linecap="round"/>
-<circle cx="9" cy="261" r="3" fill="#60c090" fill-opacity="0.45"/>
-<path d="M191 261 L191 240 M191 261 L170 261" stroke="#60c090" stroke-width="2.2" stroke-opacity="0.72" fill="none" stroke-linecap="round"/>
-<circle cx="191" cy="261" r="3" fill="#60c090" fill-opacity="0.45"/>
-<path d="M100 7 L104 11 L100 15 L96 11 Z" fill="#60c090" fill-opacity="0.45"/>
-<path d="M100 255 L104 259 L100 263 L96 259 Z" fill="#60c090" fill-opacity="0.45"/>
-<path d="M7 135 L11 139 L7 143 L3 139 Z" fill="#60c090" fill-opacity="0.45"/>
-<path d="M193 135 L197 139 L193 143 L189 139 Z" fill="#60c090" fill-opacity="0.45"/>
+<rect width="200" height="270" fill="url(#bg)" filter="url(#grain)" opacity="0.20"/>
 
-<!-- no hair — scaled head back -->
-<ellipse cx="108" cy="76" rx="34" ry="40" fill="#030a08"/>
-<!-- SNOUT extending forward (left) — key feature -->
-<path d="M74 80 C60 84 50 92 48 104 C56 100 64 94 70 88 C74 84 76 82 76 80 Z" fill="#030a08"/>
-<!-- upper snout -->
-<path d="M74 72 C62 70 52 72 46 78 C54 76 64 74 72 74 Z" fill="#030a08"/>
-<!-- scale texture marks on head -->
-<path d="M84 54 Q90 52 96 54" fill="none" stroke="#60c090" stroke-width="0.8" stroke-opacity="0.25"/>
-<path d="M80 64 Q88 62 96 64" fill="none" stroke="#60c090" stroke-width="0.8" stroke-opacity="0.25"/>
-<path d="M78 74 Q86 72 94 74" fill="none" stroke="#60c090" stroke-width="0.8" stroke-opacity="0.25"/>
-<!-- nostril -->
-<circle cx="52" cy="98" r="4" fill="#030a08"/>
-<!-- slit eye -->
-<path d="M86 66 Q92 63 98 66 Q92 69 86 66 Z" fill="#60c090" fill-opacity="0.25"/>
-<!-- neck -->
-<rect x="92" y="114" width="30" height="26" rx="7" fill="#030a08"/>
-<!-- shoulders -->
-<path d="M30 234 Q34 172 68 156 Q84 150 106 148 Q126 150 138 156 Q166 172 170 234 Z" fill="#030a08"/>
-<!-- rim light -->
-<path d="M68 54 C62 66 62 80 68 92 C72 100 78 108 86 114" fill="none" stroke="#60c090" stroke-width="1.2" stroke-opacity="0.28"/>
-<ellipse cx="100" cy="250" rx="86" ry="14" fill="#030201" fill-opacity="0.65"/>
-<rect width="200" height="270" fill="url(#vig)"/>
+<circle cx="100" cy="96" r="52" fill="none" stroke="#60c090" stroke-width="0.5" stroke-opacity="0.14"/>
+<circle cx="100" cy="96" r="46" fill="none" stroke="#60c090" stroke-width="0.9" stroke-opacity="0.22"/>
+<circle cx="100" cy="96" r="38" fill="none" stroke="#60c090" stroke-width="0.4" stroke-opacity="0.14"/>
+<path d="M100 46 L104 86 L100 96 L96 86 Z" fill="#60c090" fill-opacity="0.22"/>
+<path d="M100 146 L104 106 L100 96 L96 106 Z" fill="#60c090" fill-opacity="0.22"/>
+<path d="M50 96 L90 100 L100 96 L90 92 Z" fill="#60c090" fill-opacity="0.22"/>
+<path d="M150 96 L110 100 L100 96 L110 92 Z" fill="#60c090" fill-opacity="0.22"/>
+<path d="M130 66 L108 92 L100 96 L104 88 Z" fill="#60c090" fill-opacity="0.14"/>
+<path d="M130 126 L108 100 L100 96 L104 104 Z" fill="#60c090" fill-opacity="0.14"/>
+<path d="M70 126 L92 100 L100 96 L96 104 Z" fill="#60c090" fill-opacity="0.14"/>
+<path d="M70 66 L92 92 L100 96 L96 88 Z" fill="#60c090" fill-opacity="0.14"/>
+
+<path d="M58 80 C56 54 62 36 72 28 C76 22 82 18 90 18 C94 16 100 18 106 18 C114 18 120 22 126 28 C136 38 142 56 142 80 C142 106 130 126 118 134 C108 138 92 138 82 134 C70 126 58 106 58 80 Z" fill="#050403"/>
+<path d="M80 122 C74 132 72 144 76 154 C80 158 88 156 94 152 L106 152 C112 156 120 158 124 154 C128 144 126 132 120 122 Z" fill="#050403"/>
+<ellipse cx="88" cy="136" rx="6" ry="5" fill="#050403"/>
+<ellipse cx="112" cy="136" rx="6" ry="5" fill="#050403"/>
+<path d="M80 58 Q86 54 92 58" fill="none" stroke="#60c090" stroke-width="0.9" stroke-opacity="0.30"/>
+<path d="M108 58 Q114 54 120 58" fill="none" stroke="#60c090" stroke-width="0.9" stroke-opacity="0.30"/>
+<path d="M76 72 Q84 68 92 72" fill="none" stroke="#60c090" stroke-width="0.8" stroke-opacity="0.24"/>
+<path d="M108 72 Q116 68 124 72" fill="none" stroke="#60c090" stroke-width="0.8" stroke-opacity="0.24"/>
+<path d="M88 152 Q94 148 100 148 Q106 148 112 152" fill="none" stroke="#60c090" stroke-width="0.7" stroke-opacity="0.22"/>
+<rect x="86" y="148" width="28" height="16" rx="5" fill="#050403"/>
+<path d="M18 234 Q22 168 62 150 Q78 142 100 140 Q122 142 138 150 Q178 168 182 234 Z" fill="#050403"/>
+<ellipse cx="100" cy="252" rx="84" ry="12" fill="#030201" fill-opacity="0.62"/>
+
+<rect x="7" y="7" width="186" height="256" fill="none" stroke="#60c090" stroke-width="1.3" stroke-opacity="0.44"/>
+<rect x="11" y="11" width="178" height="248" fill="none" stroke="#60c090" stroke-width="0.5" stroke-opacity="0.18"/>
+<path d="M 23 263 L 23 85 Q 23 19 100 19 Q 177 19 177 85 L 177 263" fill="none" stroke="#60c090" stroke-width="0.9" stroke-opacity="0.38"/>
+<path d="M 27 263 L 27 87 Q 27 27 100 27 Q 173 27 173 87 L 173 263" fill="none" stroke="#60c090" stroke-width="0.4" stroke-opacity="0.18"/>
+<line x1="34" y1="244" x2="166" y2="244" stroke="#60c090" stroke-width="0.7" stroke-opacity="0.40"/>
+<line x1="44" y1="247" x2="156" y2="247" stroke="#60c090" stroke-width="0.3" stroke-opacity="0.22"/>
+<path d="M100 243 L102 245 L100 247 L98 245 Z" fill="#60c090" fill-opacity="0.60"/>
+<path d="M9 4 L11.1 6.9 L14 9 L11.1 11.1 L9 14 L6.9 11.1 L4 9 L6.9 6.9 Z" fill="#60c090" fill-opacity="0.7"/> <path d="M191 4 L193.1 6.9 L196 9 L193.1 11.1 L191 14 L188.9 11.1 L186 9 L188.9 6.9 Z" fill="#60c090" fill-opacity="0.7"/> <path d="M9 256 L11.1 258.9 L14 261 L11.1 263.1 L9 266 L6.9 263.1 L4 261 L6.9 258.9 Z" fill="#60c090" fill-opacity="0.7"/> <path d="M191 256 L193.1 258.9 L196 261 L193.1 263.1 L191 266 L188.9 263.1 L186 261 L188.9 258.9 Z" fill="#60c090" fill-opacity="0.7"/>
+<path d="M100 3 L101.7 5.3 L104 7 L101.7 8.7 L100 11 L98.3 8.7 L96 7 L98.3 5.3 Z" fill="#60c090" fill-opacity="0.55"/> <path d="M100 259 L101.7 261.3 L104 263 L101.7 264.7 L100 267 L98.3 264.7 L96 263 L98.3 261.3 Z" fill="#60c090" fill-opacity="0.55"/>
+<path d="M7 131 L8.7 133.3 L11 135 L8.7 136.7 L7 139 L5.3 136.7 L3 135 L5.3 133.3 Z" fill="#60c090" fill-opacity="0.55"/> <path d="M193 131 L194.7 133.3 L197 135 L194.7 136.7 L193 139 L191.3 136.7 L189 135 L191.3 133.3 Z" fill="#60c090" fill-opacity="0.55"/>
+<text x="100" y="258" text-anchor="middle" font-family="Georgia,serif" font-size="9" letter-spacing="3.5" fill="#60c090" fill-opacity="0.82">DRAGONBORN</text>
+<text x="100" y="267" text-anchor="middle" font-family="Georgia,serif" font-size="5.5" letter-spacing="2.0" fill="#60c090" fill-opacity="0.46">PLACEHOLDER PORTRAIT</text>
+<rect width="200" height="270" fill="url(#vign)"/>
 </svg>

@@ -1,73 +1,70 @@
 <svg viewBox="0 0 200 270" xmlns="http://www.w3.org/2000/svg">
 <defs>
-  <radialGradient id="bg" cx="53%" cy="30%" r="75%">
+  <radialGradient id="bg" cx="50%" cy="36%" r="70%">
     <stop offset="0%" stop-color="#081428"/>
-    <stop offset="50%" stop-color="#040a18"/>
-    <stop offset="100%" stop-color="#040302"/>
+    <stop offset="52%" stop-color="#040a18"/>
+    <stop offset="100%" stop-color="#060402"/>
   </radialGradient>
-  <radialGradient id="atm" cx="53%" cy="32%" r="42%">
-    <stop offset="0%" stop-color="#6090e0" stop-opacity="0.38"/>
+  <radialGradient id="atm" cx="50%" cy="34%" r="50%">
+    <stop offset="0%" stop-color="#6090e0" stop-opacity="0.44"/>
     <stop offset="100%" stop-color="#6090e0" stop-opacity="0"/>
   </radialGradient>
-  <radialGradient id="vig" cx="50%" cy="44%" r="65%">
-    <stop offset="35%" stop-color="transparent"/>
-    <stop offset="100%" stop-color="#020101" stop-opacity="0.55"/>
+  <radialGradient id="vign" cx="50%" cy="46%" r="66%">
+    <stop offset="28%" stop-color="transparent"/>
+    <stop offset="100%" stop-color="#030201" stop-opacity="0.60"/>
   </radialGradient>
+  <filter id="grain">
+    <feTurbulence type="fractalNoise" baseFrequency="0.68" numOctaves="3" stitchTiles="stitch" result="n"/>
+    <feColorMatrix type="saturate" values="0" in="n" result="g"/>
+    <feBlend in="SourceGraphic" in2="g" mode="multiply"/>
+  </filter>
 </defs>
 <rect width="200" height="270" fill="url(#bg)"/>
 <rect width="200" height="270" fill="url(#atm)"/>
-<!-- rune circle behind head, cx=105 cy=82 r=50 -->
-<circle cx="105" cy="82" r="53" fill="none" stroke="#6090e0" stroke-width="3" stroke-opacity="0.06"/>
-<circle cx="105" cy="82" r="50" fill="none" stroke="#6090e0" stroke-width="1" stroke-opacity="0.28"/>
-<circle cx="105" cy="82" r="43" fill="none" stroke="#6090e0" stroke-width="0.5" stroke-opacity="0.15"/>
-<line x1="105" y1="33" x2="105" y2="27" stroke="#6090e0" stroke-width="1.4" stroke-opacity="0.42"/>
-<line x1="140" y1="47" x2="144" y2="43" stroke="#6090e0" stroke-width="1.4" stroke-opacity="0.42"/>
-<line x1="153" y1="82" x2="159" y2="82" stroke="#6090e0" stroke-width="1.4" stroke-opacity="0.42"/>
-<line x1="140" y1="117" x2="144" y2="121" stroke="#6090e0" stroke-width="1.4" stroke-opacity="0.42"/>
-<line x1="105" y1="131" x2="105" y2="137" stroke="#6090e0" stroke-width="1.4" stroke-opacity="0.42"/>
-<line x1="70" y1="117" x2="66" y2="121" stroke="#6090e0" stroke-width="1.4" stroke-opacity="0.42"/>
-<line x1="57" y1="82" x2="51" y2="82" stroke="#6090e0" stroke-width="1.4" stroke-opacity="0.42"/>
-<line x1="70" y1="47" x2="66" y2="43" stroke="#6090e0" stroke-width="1.4" stroke-opacity="0.42"/>
-<path d="M105 76 L109 82 L105 88 L101 82 Z" fill="none" stroke="#6090e0" stroke-width="0.8" stroke-opacity="0.26"/>
-<!-- ornate frame -->
-<rect x="7" y="7" width="186" height="256" fill="none" stroke="#6090e0" stroke-width="2.2" stroke-opacity="0.08"/>
-<rect x="9" y="9" width="182" height="252" fill="none" stroke="#6090e0" stroke-width="1.2" stroke-opacity="0.40"/>
-<rect x="13" y="13" width="174" height="244" fill="none" stroke="#6090e0" stroke-width="0.5" stroke-opacity="0.16"/>
-<path d="M9 9 L9 30 M9 9 L30 9" stroke="#6090e0" stroke-width="2.2" stroke-opacity="0.72" fill="none" stroke-linecap="round"/>
-<circle cx="9" cy="9" r="3" fill="#6090e0" fill-opacity="0.45"/>
-<path d="M191 9 L191 30 M191 9 L170 9" stroke="#6090e0" stroke-width="2.2" stroke-opacity="0.72" fill="none" stroke-linecap="round"/>
-<circle cx="191" cy="9" r="3" fill="#6090e0" fill-opacity="0.45"/>
-<path d="M9 261 L9 240 M9 261 L30 261" stroke="#6090e0" stroke-width="2.2" stroke-opacity="0.72" fill="none" stroke-linecap="round"/>
-<circle cx="9" cy="261" r="3" fill="#6090e0" fill-opacity="0.45"/>
-<path d="M191 261 L191 240 M191 261 L170 261" stroke="#6090e0" stroke-width="2.2" stroke-opacity="0.72" fill="none" stroke-linecap="round"/>
-<circle cx="191" cy="261" r="3" fill="#6090e0" fill-opacity="0.45"/>
-<path d="M100 7 L104 11 L100 15 L96 11 Z" fill="#6090e0" fill-opacity="0.45"/>
-<path d="M100 255 L104 259 L100 263 L96 259 Z" fill="#6090e0" fill-opacity="0.45"/>
-<path d="M7 135 L11 139 L7 143 L3 139 Z" fill="#6090e0" fill-opacity="0.45"/>
-<path d="M193 135 L197 139 L193 143 L189 139 Z" fill="#6090e0" fill-opacity="0.45"/>
+<rect width="200" height="270" fill="url(#bg)" filter="url(#grain)" opacity="0.20"/>
 
-<!-- WILD hair spikes in multiple directions -->
-<polygon points="102,38 96,20 100,38" fill="#03040e"/>
-<polygon points="110,40 118,22 112,42" fill="#03040e"/>
-<polygon points="94,40 82,24 92,44" fill="#03040e"/>
-<polygon points="86,44 70,30 88,50" fill="#03040e"/>
-<polygon points="116,46 130,34 114,54" fill="#03040e"/>
-<!-- hair base mass -->
-<ellipse cx="102" cy="58" rx="32" ry="26" fill="#03040e"/>
-<!-- head oval (small, round) -->
-<ellipse cx="106" cy="86" rx="24" ry="28" fill="#03040e"/>
-<!-- large curious ear -->
-<ellipse cx="128" cy="86" rx="8" ry="12" fill="#03040e"/>
-<!-- big eyes hint (brow arches) -->
-<path d="M90 78 Q96 74 102 78" fill="none" stroke="#6090e0" stroke-width="1.0" stroke-opacity="0.30"/>
-<!-- nose (button) -->
-<path d="M87 90 C85 93 85 97 87 99 C89 100 91 98 91 95" fill="#03040e"/>
-<!-- neck -->
-<rect x="93" y="112" width="26" height="22" rx="7" fill="#03040e"/>
-<!-- shoulders -->
-<path d="M42 234 Q46 180 80 164 Q94 158 106 156 Q118 158 124 164 Q156 180 160 234 Z" fill="#03040e"/>
-<!-- rim light -->
-<path d="M84 64 C80 74 80 88 84 98 C86 104 90 110 96 114" fill="none" stroke="#6090e0" stroke-width="1.2" stroke-opacity="0.28"/>
-<ellipse cx="100" cy="250" rx="86" ry="14" fill="#030201" fill-opacity="0.65"/>
-<rect width="200" height="270" fill="url(#vig)"/>
+<circle cx="100" cy="96" r="52" fill="none" stroke="#6090e0" stroke-width="0.5" stroke-opacity="0.14"/>
+<circle cx="100" cy="96" r="46" fill="none" stroke="#6090e0" stroke-width="0.9" stroke-opacity="0.22"/>
+<circle cx="100" cy="96" r="38" fill="none" stroke="#6090e0" stroke-width="0.4" stroke-opacity="0.14"/>
+<path d="M100 46 L104 86 L100 96 L96 86 Z" fill="#6090e0" fill-opacity="0.22"/>
+<path d="M100 146 L104 106 L100 96 L96 106 Z" fill="#6090e0" fill-opacity="0.22"/>
+<path d="M50 96 L90 100 L100 96 L90 92 Z" fill="#6090e0" fill-opacity="0.22"/>
+<path d="M150 96 L110 100 L100 96 L110 92 Z" fill="#6090e0" fill-opacity="0.22"/>
+<path d="M130 66 L108 92 L100 96 L104 88 Z" fill="#6090e0" fill-opacity="0.14"/>
+<path d="M130 126 L108 100 L100 96 L104 104 Z" fill="#6090e0" fill-opacity="0.14"/>
+<path d="M70 126 L92 100 L100 96 L96 104 Z" fill="#6090e0" fill-opacity="0.14"/>
+<path d="M70 66 L92 92 L100 96 L96 88 Z" fill="#6090e0" fill-opacity="0.14"/>
+
+<polygon points="100,12 96,32 100,44" fill="#050403"/>
+<polygon points="84,16 82,36 88,46" fill="#050403"/>
+<polygon points="116,16 118,36 112,46" fill="#050403"/>
+<polygon points="70,22 74,42 82,50" fill="#050403"/>
+<polygon points="130,22 126,42 118,50" fill="#050403"/>
+<polygon points="58,32 66,50 76,54" fill="#050403"/>
+<ellipse cx="100" cy="58" rx="28" ry="20" fill="#050403"/>
+<ellipse cx="100" cy="90" rx="30" ry="36" fill="#050403"/>
+<ellipse cx="70" cy="88" rx="9" ry="13" fill="#050403"/>
+<ellipse cx="130" cy="88" rx="9" ry="13" fill="#050403"/>
+<path d="M86 78 Q92 74 98 78" fill="none" stroke="#6090e0" stroke-width="1.0" stroke-opacity="0.32"/>
+<path d="M102 78 Q108 74 114 78" fill="none" stroke="#6090e0" stroke-width="1.0" stroke-opacity="0.32"/>
+<rect x="86" y="124" width="28" height="18" rx="5" fill="#050403"/>
+<path d="M72 144 Q80 128 88 124 L112 124 Q120 128 128 144 Z" fill="#050403"/>
+<circle cx="100" cy="152" r="5" fill="none" stroke="#c8a820" stroke-width="1.0" stroke-opacity="0.40"/>
+<circle cx="100" cy="152" r="2" fill="#c8a820" fill-opacity="0.30"/>
+<path d="M18 234 Q22 168 64 148 Q80 140 100 138 Q120 140 136 148 Q178 168 182 234 Z" fill="#050403"/>
+<ellipse cx="100" cy="252" rx="84" ry="12" fill="#030201" fill-opacity="0.62"/>
+
+<rect x="7" y="7" width="186" height="256" fill="none" stroke="#6090e0" stroke-width="1.3" stroke-opacity="0.44"/>
+<rect x="11" y="11" width="178" height="248" fill="none" stroke="#6090e0" stroke-width="0.5" stroke-opacity="0.18"/>
+<path d="M 23 263 L 23 85 Q 23 19 100 19 Q 177 19 177 85 L 177 263" fill="none" stroke="#6090e0" stroke-width="0.9" stroke-opacity="0.38"/>
+<path d="M 27 263 L 27 87 Q 27 27 100 27 Q 173 27 173 87 L 173 263" fill="none" stroke="#6090e0" stroke-width="0.4" stroke-opacity="0.18"/>
+<line x1="34" y1="244" x2="166" y2="244" stroke="#6090e0" stroke-width="0.7" stroke-opacity="0.40"/>
+<line x1="44" y1="247" x2="156" y2="247" stroke="#6090e0" stroke-width="0.3" stroke-opacity="0.22"/>
+<path d="M100 243 L102 245 L100 247 L98 245 Z" fill="#6090e0" fill-opacity="0.60"/>
+<path d="M9 4 L11.1 6.9 L14 9 L11.1 11.1 L9 14 L6.9 11.1 L4 9 L6.9 6.9 Z" fill="#6090e0" fill-opacity="0.7"/> <path d="M191 4 L193.1 6.9 L196 9 L193.1 11.1 L191 14 L188.9 11.1 L186 9 L188.9 6.9 Z" fill="#6090e0" fill-opacity="0.7"/> <path d="M9 256 L11.1 258.9 L14 261 L11.1 263.1 L9 266 L6.9 263.1 L4 261 L6.9 258.9 Z" fill="#6090e0" fill-opacity="0.7"/> <path d="M191 256 L193.1 258.9 L196 261 L193.1 263.1 L191 266 L188.9 263.1 L186 261 L188.9 258.9 Z" fill="#6090e0" fill-opacity="0.7"/>
+<path d="M100 3 L101.7 5.3 L104 7 L101.7 8.7 L100 11 L98.3 8.7 L96 7 L98.3 5.3 Z" fill="#6090e0" fill-opacity="0.55"/> <path d="M100 259 L101.7 261.3 L104 263 L101.7 264.7 L100 267 L98.3 264.7 L96 263 L98.3 261.3 Z" fill="#6090e0" fill-opacity="0.55"/>
+<path d="M7 131 L8.7 133.3 L11 135 L8.7 136.7 L7 139 L5.3 136.7 L3 135 L5.3 133.3 Z" fill="#6090e0" fill-opacity="0.55"/> <path d="M193 131 L194.7 133.3 L197 135 L194.7 136.7 L193 139 L191.3 136.7 L189 135 L191.3 133.3 Z" fill="#6090e0" fill-opacity="0.55"/>
+<text x="100" y="258" text-anchor="middle" font-family="Georgia,serif" font-size="9" letter-spacing="3.5" fill="#6090e0" fill-opacity="0.82">GNOME</text>
+<text x="100" y="267" text-anchor="middle" font-family="Georgia,serif" font-size="5.5" letter-spacing="2.0" fill="#6090e0" fill-opacity="0.46">PLACEHOLDER PORTRAIT</text>
+<rect width="200" height="270" fill="url(#vign)"/>
 </svg>
