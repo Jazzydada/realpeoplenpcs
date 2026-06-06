@@ -14,8 +14,8 @@ const LABELS: Record<string, Record<Lang, string>> = {
   firstImpression:    { da: 'FØRSTE INDTRYK',     en: 'FIRST IMPRESSION' },
 
   // CharacterSheet — Trait labels
-  personalityTrait:   { da: 'PERSONLIGHED',        en: 'PERSONALITY TRAIT' },
-  ideal:              { da: 'DRAMA',               en: 'IDEAL' },
+  personalityTrait:   { da: 'PERSONLIGHEDSTRÆK',  en: 'PERSONALITY TRAIT' },
+  ideal:              { da: 'IDEAL',               en: 'IDEAL' },
   bond:               { da: 'BÅND',               en: 'BOND' },
   flaw:               { da: 'FEJL',               en: 'FLAW' },
 
