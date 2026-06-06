@@ -107,78 +107,16 @@ function toPromptInput(char: Character): PromptInput {
   // END: richer portrait prompt grounding
 }
 
-type ImageMode = 'auto' | 'perchance' | 'pollinations'
-type GeneratedPortrait = { url: string; provider: 'perchance' | 'pollinations'; fallbackReason?: string }
+type GeneratedPortrait = { url: string; provider: string; fallbackReason?: string }
 
-// ─── Direct browser → Pollinations with smart retry ──────────────────────────
-// Pollinations allows max 1 queued request per IP. When the user generates a
-// new character while a portrait is still generating, the new request gets 402
-// "queue full". We handle this by waiting and retrying instead of falling back
-// to the server route (which uses a shared Vercel IP that is far more limited).
-//
-// Model: "flux" ≈ 8-15s, free, no API key, CORS-enabled on Pollinations.
-
-function abortableDelay(ms: number, signal?: AbortSignal): Promise<void> {
-  return new Promise((resolve, reject) => {
-    if (signal?.aborted) return reject(new DOMException('Aborted', 'AbortError'))
-    const t = setTimeout(resolve, ms)
-    signal?.addEventListener('abort', () => { clearTimeout(t); reject(new DOMException('Aborted', 'AbortError')) }, { once: true })
-  })
-}
-
-async function fetchPollinationsDirect(
-  prompt: string,
-  quality: 'fast' | 'high',
-  signal?: AbortSignal,
-): Promise<string> {
-  const { w, h } = quality === 'high' ? { w: 768, h: 1024 } : { w: 512, h: 768 }
-  const model    = quality === 'high' ? 'flux-realism' : 'flux'
-  const seed     = `${Date.now()}-${Math.floor(Math.random() * 1_000_000)}`
-  const url      = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=${w}&height=${h}&nologo=true&seed=${seed}&model=${model}&enhance=false&safe=true&cache=false`
-
-  const MAX_ATTEMPTS = 6
-  const RETRY_DELAY  = 9_000  // 9s — enough for the previous request to complete
-
-  for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
-    if (signal?.aborted) throw new DOMException('Aborted', 'AbortError')
-
-    const res = await fetch(url, { signal, headers: { 'Accept': 'image/*' } })
-
-    if (res.ok) {
-      const blob = await res.blob()
-      if (blob.size < 5000) throw new Error('Pollinations returned an empty image')
-      return URL.createObjectURL(blob)
-    }
-
-    if (res.status === 402) {
-      // Queue full — wait and retry. Do NOT fall back to server (server IP is worse).
-      console.log(`[portrait] Pollinations queue full (attempt ${attempt + 1}/${MAX_ATTEMPTS}), retrying in ${RETRY_DELAY / 1000}s`)
-      await abortableDelay(RETRY_DELAY, signal)
-      continue
-    }
-
-    throw new Error(`Pollinations HTTP ${res.status}`)
-  }
-
-  throw new Error('Pollinations: kø fuld — prøv igen om lidt')
-}
-
-async function fetchGeneratedImage(prompt: string, negativePrompt: string, provider: ImageMode, quality: 'fast' | 'high', imageStyle: string, portraitType: string, signal?: AbortSignal): Promise<GeneratedPortrait> {
-  // Always try direct browser call — avoids shared Vercel IP rate-limit
-  try {
-    const url = await fetchPollinationsDirect(prompt, quality, signal)
-    return { url, provider: 'pollinations' }
-  } catch (err) {
-    // Abort = user requested a new portrait — don't fall back, just stop
-    if (err instanceof Error && (err.name === 'AbortError' || err.message.includes('AbortError'))) throw err
-    console.warn('[portrait] Pollinations failed after retries, trying server route:', err)
-  }
-
-  // Last-resort server route (may also hit rate limits but worth trying once)
+// ─── All image generation goes through the server route ──────────────────────
+// fal.ai requires an API key that must stay server-side.
+// The server falls back to Pollinations automatically if fal.ai is unavailable.
+async function fetchGeneratedImage(prompt: string, negativePrompt: string, quality: 'fast' | 'high', signal?: AbortSignal): Promise<GeneratedPortrait> {
   const res = await fetch('/api/portrait', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ prompt, negativePrompt, provider: 'pollinations', quality, imageStyle, portraitType }),
+    body: JSON.stringify({ prompt, negativePrompt, quality }),
     signal,
   })
   if (!res.ok) {
@@ -392,7 +330,6 @@ export default function CharacterGenerator() {
     setImageProvider(null)
     setImageUrl(null)
 
-    const mode: ImageMode = 'auto'
     const basePrompt = char.perchancePrompt || char.imagePrompt
     // START IMAGE IMPROVEMENT + START FACE QUALITY SYSTEM + START NON-BLOCKING PORTRAIT SYSTEM
     // Reinforce the base prompt's composition instructions (which already start with 3/4 body).
@@ -421,7 +358,7 @@ export default function CharacterGenerator() {
       'text, watermark, logo, blurry, extra limbs, bad anatomy, modern clothing, sci-fi, cyberpunk',
     ].filter(Boolean).join(', ')
     // END IMAGE IMPROVEMENT / END FACE QUALITY SYSTEM / END NON-BLOCKING PORTRAIT SYSTEM
-    const cacheKey = makeCacheKey(`${mode}:${prompt}:${negative}`, q)
+    const cacheKey = makeCacheKey(`${prompt}:${negative}`, q)
 
     const cached = forceNew ? undefined : getCachedImageUrl(cacheKey)
     if (cached) {
@@ -436,7 +373,7 @@ export default function CharacterGenerator() {
     // Run asynchronously — caller is NOT awaited
     ;(async () => {
       try {
-        const result = await fetchGeneratedImage(prompt, negative, mode, q, imageStyle, portraitType, controller.signal)
+        const result = await fetchGeneratedImage(prompt, negative, q, controller.signal)
         // Discard if a newer request has already completed or been cancelled
         if (controller.signal.aborted || portraitGenRef.current !== myGen) return
         pendingCache.current = { key: cacheKey, url: result.url }
