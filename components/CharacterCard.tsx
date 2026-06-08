@@ -189,8 +189,8 @@ function InfoCard({ title, children, onReroll, variant = 'traits', icon }: { tit
   )
 }
 
-function DesktopRedesign({ character, imageUrl, isGenerating, isLoadingImage, imageStartedAt, quality, onImageLoad, onZoom, onRerollName, onRerollField, lang }: Props & { lang: Lang }) {
-  const portraitProps = { character, imageUrl, isLoadingImage, imageStartedAt, quality, onImageLoad, onZoom, lang }
+function DesktopRedesign({ character, imageUrl, isGenerating, isLoadingImage, imageStartedAt, quality, onImageLoad, onZoom, onRerollPortrait, onRerollName, onRerollField, lang }: Props & { lang: Lang }) {
+  const portraitProps = { character, imageUrl, isLoadingImage, imageStartedAt, quality, onImageLoad, onZoom, onRerollPortrait, lang }
 
   if (isGenerating || !character) {
     return (
@@ -409,6 +409,7 @@ interface Props {
   quality: 'fast' | 'high'
   onImageLoad: () => void
   onZoom: () => void
+  onRerollPortrait?: () => void
   onRerollName: () => void
   onRerollField: (field: RerollField) => void
   lang?: Lang
@@ -421,11 +422,11 @@ interface Props {
 // The benefit is zero hydration mismatch and no flash-of-wrong-layout on
 // first paint — a worthwhile trade for a character generator.
 const CharacterCard = forwardRef<HTMLDivElement, Props>(function CharacterCard(
-  { character, imageUrl, isGenerating, isLoadingImage, imageStartedAt, quality, onImageLoad, onZoom, onRerollName, onRerollField, lang = 'da' },
+  { character, imageUrl, isGenerating, isLoadingImage, imageStartedAt, quality, onImageLoad, onZoom, onRerollPortrait, onRerollName, onRerollField, lang = 'da' },
   ref,
 ) {
   const portraitProps = {
-    character, imageUrl, isLoadingImage, imageStartedAt, quality, onImageLoad, onZoom,
+    character, imageUrl, isLoadingImage, imageStartedAt, quality, onImageLoad, onZoom, onRerollPortrait,
   }
 
   return (
@@ -518,7 +519,7 @@ const CharacterCard = forwardRef<HTMLDivElement, Props>(function CharacterCard(
         <CardBorder zIndex={30} />
       </div>
 
-      <DesktopRedesign character={character} imageUrl={imageUrl} isGenerating={isGenerating} isLoadingImage={isLoadingImage} imageStartedAt={imageStartedAt} quality={quality} onImageLoad={onImageLoad} onZoom={onZoom} onRerollName={onRerollName} onRerollField={onRerollField} lang={lang} />
+      <DesktopRedesign character={character} imageUrl={imageUrl} isGenerating={isGenerating} isLoadingImage={isLoadingImage} imageStartedAt={imageStartedAt} quality={quality} onImageLoad={onImageLoad} onZoom={onZoom} onRerollPortrait={onRerollPortrait} onRerollName={onRerollName} onRerollField={onRerollField} lang={lang} />
 
     </motion.div>
   )

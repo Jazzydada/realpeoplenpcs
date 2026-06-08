@@ -685,6 +685,7 @@ export default function CharacterGenerator() {
               quality={quality}
               onImageLoad={handleImageLoad}
               onZoom={handleShowZoom}
+              onRerollPortrait={usePortraits ? handleRegenerateImage : undefined}
               onRerollName={handleRerollName}
               onRerollField={handleRerollField}
               lang={lang}

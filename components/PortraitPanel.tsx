@@ -13,12 +13,13 @@ interface Props {
   quality: 'fast' | 'high'
   onImageLoad: () => void
   onZoom: () => void
+  onRerollPortrait?: () => void
   lang?: 'da' | 'en'
 }
 
 const LOADING_RUNES = ['ᚠ', 'ᚢ', 'ᚦ', 'ᚨ', 'ᚱ', 'ᚲ', 'ᚷ', 'ᚹ', 'ᚺ', 'ᚾ', 'ᛁ', 'ᛃ']
 
-function PortraitPanel({ character, imageUrl, isLoadingImage, imageStartedAt, quality, onImageLoad, onZoom, lang = 'da' }: Props) {
+function PortraitPanel({ character, imageUrl, isLoadingImage, imageStartedAt, quality, onImageLoad, onZoom, onRerollPortrait, lang = 'da' }: Props) {
   const [imgLoaded, setImgLoaded] = useState(false)
   const [imgError,  setImgError]  = useState(false)
   const [retryKey,  setRetryKey]  = useState(0)
@@ -65,11 +66,13 @@ function PortraitPanel({ character, imageUrl, isLoadingImage, imageStartedAt, qu
     return 'Kunne ikke fremkalde portræt. Prøv igen.'
   }
 
+  const canReroll = !!character && !isLoadingImage && !!onRerollPortrait
+
   return (
     <div
       className="relative h-full w-full overflow-hidden group"
-      style={{ background: '#080604', cursor: imgLoaded ? 'pointer' : 'default' }}
-      onClick={imgLoaded ? onZoom : undefined}
+      style={{ background: '#080604', cursor: canReroll ? 'pointer' : 'default' }}
+      onClick={canReroll ? onRerollPortrait : undefined}
     >
       {/* ── Race-specific placeholder (always visible when no portrait) ─── */}
       {showPlaceholder && (
@@ -164,15 +167,29 @@ function PortraitPanel({ character, imageUrl, isLoadingImage, imageStartedAt, qu
         </div>
       )}
 
-      {/* ── Zoom hint ─────────────────────────────────────────────────── */}
+      {/* ── Hover hint: click = reroll ───────────────────────────────── */}
+      {canReroll && (
+        <div className="absolute inset-x-0 bottom-0 opacity-0 group-hover:opacity-100 transition-opacity px-3 pb-2 pt-6 pointer-events-none"
+          style={{ background: 'linear-gradient(to top, rgba(4,3,2,0.72) 0%, transparent 100%)', zIndex: 6 }}
+        >
+          <p className="font-cinzel tracking-widest text-center" style={{ fontSize: '0.52rem', color: 'rgba(201,168,76,0.65)' }}>
+            ↺ {lang === 'en' ? 'CLICK TO REROLL PORTRAIT' : 'KLIK FOR NYT PORTRÆT'}
+          </p>
+        </div>
+      )}
+
+      {/* ── Zoom button (top-right, stops propagation so click≠reroll) ── */}
       {imgLoaded && (
-        <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity px-2 py-1"
-          style={{ background: 'rgba(0,0,0,0.6)', border: '1px solid rgba(201,168,76,0.25)', zIndex: 6 }}
+        <button
+          type="button"
+          className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity px-2 py-1"
+          style={{ background: 'rgba(0,0,0,0.6)', border: '1px solid rgba(201,168,76,0.25)', zIndex: 7, cursor: 'zoom-in' }}
+          onClick={(e) => { e.stopPropagation(); onZoom() }}
         >
           <span className="font-cinzel" style={{ fontSize: '0.5rem', color: 'rgba(201,168,76,0.7)', letterSpacing: '0.12em' }}>
             ⊕ {lang === 'en' ? 'ENLARGE' : 'FORSTØR'}
           </span>
-        </div>
+        </button>
       )}
 
       {/* ── Cinematic vignette over generated portrait ─────────────────── */}
