@@ -681,7 +681,9 @@ export function buildEnglishPrompts(character: Pick<Character, 'name' | 'species
     // 7. Class
     classVisual,
     // 7. Style anchor
-    'Dungeons and Dragons 2024 sourcebook illustration. Professional fantasy RPG NPC illustration.',
+    'PAINTED ILLUSTRATION. D&D 2024 Player\'s Handbook art style. Wayne Reynolds style. ' +
+    'Oil painting texture. Textured brushwork. Traditional fantasy art. ' +
+    'NOT photorealistic. NOT 3D render. NOT CGI.',
     // 8. Character details
     `CHARACTER: ${character.name}, level ${character.level ?? 1} ${tier.tier}`,
     `APPEARANCE DETAIL (repeat for emphasis): ${appearanceEn}`,
@@ -1107,8 +1109,15 @@ export function generateCharacter(lang: Lang = 'da'): Character {
     inventoryItem, firstImpression: npcLayerBase.firstImpression, mannerism: npcLayerBase.mannerism, level, alignment: alignmentInternal,
     gender,
   })
-  const npcLayer = { ...npcLayerBase, ...promptLayer }
   const combatStats = generateCombatStats(characterClassInternal, level, abilityScores)
+
+  // Inject actual weapon names into the portrait prompt so the AI renders the right weapons
+  const meleeEn  = WEAPON_DA_TO_EN[combatStats.melee.name]  ?? combatStats.melee.name
+  const rangedEn = WEAPON_DA_TO_EN[combatStats.ranged.name] ?? combatStats.ranged.name
+  const weaponAddition = `, WEAPONS CARRIED: ${meleeEn} as primary melee weapon (clearly visible, period-accurate medieval fantasy), ${rangedEn} as ranged weapon (clearly visible, period-accurate medieval fantasy). NO modern weapons. NO firearms.`
+  const enhancedPerchancePrompt = promptLayer.perchancePrompt + weaponAddition
+
+  const npcLayer = { ...npcLayerBase, ...promptLayer, perchancePrompt: enhancedPerchancePrompt }
 
   const imagePrompt = generateImagePrompt({
     name, species: speciesInternal, characterClass: characterClassInternal,

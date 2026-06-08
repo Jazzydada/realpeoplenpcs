@@ -453,9 +453,10 @@ export const CLASS_VISUAL_PRIORITY_EN: Record<string, string> = {
 // Art style is permanently locked to Cinematic.
 // The STYLE_EN map is kept for reference but only CINEMATIC_STYLE is used.
 const CINEMATIC_STYLE =
-  'cinematic fantasy art, Dungeons and Dragons 2024 sourcebook illustration, ' +
-  'highly detailed professional RPG character portrait, dramatic cinematic lighting, ' +
-  'painterly realism, masterwork fantasy illustration'
+  'traditional painted fantasy illustration, D&D 2024 Player\'s Handbook art style, ' +
+  'Wayne Reynolds concept art, painterly oil illustration, textured brushwork, ' +
+  'professional RPG sourcebook painting, warm dramatic fantasy lighting, ' +
+  'NOT photorealistic, NOT 3D render, NOT CGI render, NOT digital photo'
 
 const STYLE_EN: Record<string, string> = {
   'painterly':  CINEMATIC_STYLE,
@@ -586,7 +587,9 @@ export function generateImagePrompt(input: PromptInput): string {
     // 5. CLASS IDENTITY
     classVisual,
     // 6. STYLE anchor
-    'Dungeons and Dragons 2024 sourcebook illustration. Professional fantasy RPG NPC illustration.',
+    'PAINTED ILLUSTRATION. D&D 2024 Player\'s Handbook art style. Wayne Reynolds style. ' +
+    'Oil painting texture. Textured brushwork. Traditional fantasy art. ' +
+    'NOT photorealistic. NOT 3D render. NOT CGI.',
     // 7. CHARACTER + SCENE + PERSONAL DETAILS
     `character name: ${name}`,
     `setting: ${sceneDesc}`,
