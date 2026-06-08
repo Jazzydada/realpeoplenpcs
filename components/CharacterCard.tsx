@@ -255,8 +255,8 @@ function DesktopRedesign({ character, imageUrl, isGenerating, isLoadingImage, im
                 )
               })}
             </div>
-            {/* Row 2: WIS CHA AC INIT SPD (5 cols) */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5,1fr)', gap: 5, marginBottom: 8 }}>
+            {/* Row 2: WIS CHA AC INIT HP SPD (6 cols) */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6,1fr)', gap: 5, marginBottom: 8 }}>
               {abilityRows.slice(4,6).map(([abbr, key]) => {
                 const score = abilities[key]
                 const mod = Math.floor((score - 10) / 2)
@@ -271,6 +271,7 @@ function DesktopRedesign({ character, imageUrl, isGenerating, isLoadingImage, im
               {([
                 { label: 'AC',   value: c.armorClass,       color: '#7dd4f8' },
                 { label: 'INIT', value: (() => { const n = parseInt(String(c.initiative).replace(/[^-\d]/g,'')); return (n >= 0 ? '+' : '') + n })(), color: '#f0c040' },
+                { label: 'HP',   value: c.hitPoints,        color: '#f07070' },
                 { label: 'SPD',  value: c.speed,            color: 'rgba(42,20,4,0.80)' },
               ] as const).map(({ label, value, color }) => (
                 <div key={label} style={{ textAlign: 'center', borderRadius: 4, border: '1px solid rgba(42,20,4,0.35)', background: 'rgba(0,0,0,0.16)', padding: '4px 1px' }}>

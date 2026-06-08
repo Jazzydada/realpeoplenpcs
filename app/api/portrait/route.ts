@@ -43,7 +43,7 @@ async function generateFalImage(prompt: string, quality: Quality): Promise<Gener
     seed: Math.floor(Math.random() * 2_000_000_000),
     enable_safety_checker: false,
   }
-  if (quality === 'fast') body.num_inference_steps = 4
+  if (quality === 'fast') body.num_inference_steps = 8
 
   console.log(`[portrait/fal] Starting ${model}`)
   const startedAt = Date.now()

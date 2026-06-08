@@ -662,22 +662,23 @@ export function buildEnglishPrompts(character: Pick<Character, 'name' | 'species
     'THREE-QUARTER BODY PORTRAIT. CHARACTER VISIBLE FROM HEAD TO KNEES. ' +
     'PORTRAIT-FOCUSED COMPOSITION. VISIBLE TORSO. BELT AND EQUIPMENT VISIBLE. WEAPONS VISIBLE. ARMOR VISIBLE. ' +
     'NO CLOSE-UP. NO HEADSHOT. NO BUST ONLY. NO FACE CROP.',
-    // 2. MANDATORY appearance — placed FIRST so the model cannot ignore it
-    // Physical distinguishing features (scars, tattoos, missing fingers etc.) are the
-    // most important detail to preserve. Repeat and capitalise for maximum weight.
+    // 2. MANDATORY species — placed early so the model renders correct race features
+    `MANDATORY RACE — MUST BE RENDERED EXACTLY: ${speciesVisual}. ` +
+    `THIS CHARACTER IS A ${raceFeatures.toUpperCase()}. DO NOT render as human unless species is human.`,
+    // 3. MANDATORY appearance — physical distinguishing features
     `MANDATORY FACIAL FEATURE — MUST BE VISIBLE AND CLEARLY RENDERED: ${appearanceEn}. ` +
     `DO NOT smooth over or omit: ${appearanceEn}.`,
-    // 3. Face quality
+    // 4. Face quality
     'portrait quality face. extremely detailed eyes. sharp eyes. symmetrical eyes. ' +
     'highly detailed facial features. expressive realistic eyes. character concept art face. ' +
     'beautiful fantasy portrait. professional fantasy illustration. studio quality character portrait. ' +
     'focus on face and eyes. face is the focal point. award winning fantasy portrait. ' +
     'strong facial structure. believable face. memorable character design. clear readable expression.',
-    // 4. Gender
+    // 5. Gender
     genderVisual,
-    // 5. Species
+    // 6. Species (repeat for emphasis)
     speciesVisual,
-    // 6. Class
+    // 7. Class
     classVisual,
     // 7. Style anchor
     'Dungeons and Dragons 2024 sourcebook illustration. Professional fantasy RPG NPC illustration.',
