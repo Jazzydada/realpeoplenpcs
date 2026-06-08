@@ -336,6 +336,17 @@ function DesktopRedesign({ character, imageUrl, isGenerating, isLoadingImage, im
                 </div>
               )
             })()}
+            {/* Purse */}
+            {character.purse && (
+              <div style={{ borderTop: '1px solid rgba(42,20,4,0.22)', paddingTop: 6, marginTop: 6 }}>
+                <span className="font-cinzel" style={{ fontWeight: 800, color: '#251004', fontSize: '0.50rem', textTransform: 'uppercase', letterSpacing: '0.10em', display: 'block', marginBottom: 3 }}>
+                  {t(lang, 'purse')}
+                </span>
+                <span style={{ color: 'rgba(42,20,4,0.78)', fontSize: '0.60rem', lineHeight: 1.35, display: 'block' }}>
+                  {character.translations?.[lang]?.purse ?? character.purse}
+                </span>
+              </div>
+            )}
           </InfoCard>
         </aside>
 

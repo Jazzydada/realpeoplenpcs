@@ -91,6 +91,106 @@ function roll(sides: number): number {
   return Math.floor(Math.random() * sides) + 1
 }
 
+// ─── Purse / Wealth on person ─────────────────────────────────────────────────
+// Coins scale with level; rare chance of gems or magic items at any level,
+// increasing sharply at higher levels.
+
+interface PursePair { da: string; en: string }
+
+const MAGIC_ITEMS: PursePair[] = [
+  // Potions
+  { da: 'en svag helbredsdrink (+2d4+2 HP)',       en: 'a Potion of Healing Minor (+2d4+2 HP)' },
+  { da: 'en helbredsdrink (2d4+2 HP)',              en: 'a Potion of Healing (2d4+2 HP)' },
+  { da: 'en giftsmodgift',                          en: 'a Potion of Antitoxin' },
+  { da: 'en hastigheds-drøjke (1 time)',            en: 'a Potion of Speed (1 hour)' },
+  { da: 'en usynlighedsdrink (1 time)',             en: 'a Potion of Invisibility (1 hour)' },
+  // Scrolls
+  { da: 'en tryllekort-rulle (niveau 1)',           en: 'a Spell Scroll (1st level)' },
+  { da: 'en tryllekort-rulle (niveau 2)',           en: 'a Spell Scroll (2nd level)' },
+  { da: 'en detektionsrulle',                       en: 'a Scroll of Detection' },
+  // Minor magic
+  { da: 'en +1 dolk',                              en: 'a +1 Dagger' },
+  { da: 'et +1 kortsværd',                         en: 'a +1 Shortsword' },
+  { da: 'en beskyttelsesring (+1 AC)',              en: 'a Ring of Protection (+1 AC)' },
+  { da: 'et amulet mod gift',                      en: 'an Amulet of Proof against Poison' },
+  { da: 'støvler af elvandring (Advantage Stealth)', en: 'Boots of Elvenkind (Advantage Stealth)' },
+  { da: 'en taske med uendeligt rum',              en: 'a Bag of Holding' },
+  { da: 'et kikkertkikkert (Clairvoyance 3/dag)',  en: 'Eyes of the Eagle (Advantage Perception)' },
+  { da: 'en ring af sind-afskærmning',             en: 'a Ring of Mind Shielding' },
+  { da: 'et +1 skjold',                            en: 'a +1 Shield' },
+  { da: 'en cloak of elvenkind',                   en: 'a Cloak of Elvenkind' },
+]
+
+const GEMS: PursePair[] = [
+  { da: 'en onyx (10 gp)',       en: 'an onyx (10 gp)' },
+  { da: 'en turmalin (10 gp)',   en: 'a tourmaline (10 gp)' },
+  { da: 'en jade (100 gp)',      en: 'a jade stone (100 gp)' },
+  { da: 'en ametyst (50 gp)',    en: 'an amethyst (50 gp)' },
+  { da: 'en topas (500 gp)',     en: 'a topaz (500 gp)' },
+  { da: 'en safir (1.000 gp)',   en: 'a sapphire (1,000 gp)' },
+  { da: 'en rubin (1.500 gp)',   en: 'a ruby (1,500 gp)' },
+  { da: 'en diamant (5.000 gp)', en: 'a diamond (5,000 gp)' },
+]
+
+function generatePurse(level: number, alignment: string): PursePair {
+  // Magic item chance: rare at low level, common at high level
+  const magicChance = level <= 2 ? 0.04 : level <= 4 ? 0.08 : level <= 6 ? 0.14
+                    : level <= 9 ? 0.22 : level <= 12 ? 0.34 : 0.50
+  // Gem chance (separate from magic, always stackable with coins)
+  const gemChance   = level <= 2 ? 0.05 : level <= 4 ? 0.10 : level <= 6 ? 0.20
+                    : level <= 9 ? 0.30 : level <= 12 ? 0.40 : 0.55
+
+  // Evil characters carry slightly more coin (plunder) or slightly less (gambled away)
+  const evilMod = isEvil(alignment) ? (Math.random() < 0.5 ? 1.4 : 0.7) : 1.0
+
+  let pp = 0, gp = 0, sp = 0, cp = 0
+
+  if (level <= 2) {
+    cp = roll(8) + roll(4)
+    sp = roll(4)
+    if (Math.random() < 0.35) gp = roll(3)
+  } else if (level <= 4) {
+    sp = roll(6) * 2 + roll(4)
+    gp = roll(6) + roll(4)
+  } else if (level <= 6) {
+    gp = roll(10) * 2 + roll(6)
+    sp = roll(6) * 3
+  } else if (level <= 9) {
+    gp = roll(10) * 5 + roll(20)
+    if (Math.random() < 0.4) pp = roll(6)
+  } else if (level <= 12) {
+    gp = roll(20) * 5 + roll(20)
+    pp = roll(10) + roll(6)
+  } else {
+    gp = roll(20) * 10 + roll(20)
+    pp = roll(20) + roll(10)
+  }
+
+  // Apply evil modifier and round
+  gp = Math.round(gp * evilMod)
+
+  // Build coin string (omit zero denominations; omit CP above level 5)
+  const coinParts: string[] = []
+  if (pp > 0) coinParts.push(`${pp} pp`)
+  if (gp > 0) coinParts.push(`${gp} gp`)
+  if (sp > 0) coinParts.push(`${sp} sp`)
+  if (cp > 0 && level <= 4) coinParts.push(`${cp} cp`)
+  const coinStr = coinParts.join(', ') || '0 gp'
+
+  const extras: PursePair[] = []
+  if (Math.random() < gemChance) extras.push(pick(GEMS))
+  if (Math.random() < magicChance) extras.push(pick(MAGIC_ITEMS))
+
+  if (extras.length === 0) return { da: coinStr, en: coinStr }
+
+  const extraDa = extras.map(e => e.da).join(', ')
+  const extraEn = extras.map(e => e.en).join(', ')
+  return {
+    da: `${coinStr}, ${extraDa}`,
+    en: `${coinStr}, ${extraEn}`,
+  }
+}
+
 function rollAbilityScore(): number {
   const rolls = [roll(6), roll(6), roll(6), roll(6)]
   rolls.sort((a, b) => a - b)
@@ -1139,12 +1239,15 @@ export function generateCharacter(lang: Lang = 'da'): Character {
   // Translate the appearance string (DA → EN via APPEARANCE_EN lookup)
   const appearanceEnDisplay = englishOr(appearance, APPEARANCE_EN)
 
+  const pursePair = generatePurse(level, alignmentInternal)
+
   const translations = {
     da: {
       species: speciesDa, characterClass: classDa, background: bgDa, alignment: alDa,
       personalityTrait: ptPair.da, ideal: idPair.da, bond: bdPair.da, flaw: flPair.da,
       inventoryItem: inventoryItemDa,
       appearance,               // always stored in DA (internal)
+      purse: pursePair.da,
       ...npcLayer.npcTranslations.da,
     } as CharacterTranslations['da'],
     en: {
@@ -1152,6 +1255,7 @@ export function generateCharacter(lang: Lang = 'da'): Character {
       personalityTrait: ptPair.en, ideal: idPair.en, bond: bdPair.en, flaw: flPair.en,
       inventoryItem: inventoryItemEn,
       appearance: appearanceEnDisplay,   // EN translation of the DA appearance string
+      purse: pursePair.en,
       ...npcLayer.npcTranslations.en,
     } as CharacterTranslations['en'],
   }
@@ -1178,6 +1282,7 @@ export function generateCharacter(lang: Lang = 'da'): Character {
     companion,
     imagePrompt,
     artStyle,
+    purse: lang === 'en' ? pursePair.en : pursePair.da,
     adventureHooks: hooks,
     createdAt: new Date().toISOString(),
     accentColor: CLASS_ACCENT_COLORS[characterClassInternal] ?? '#0d0b07',

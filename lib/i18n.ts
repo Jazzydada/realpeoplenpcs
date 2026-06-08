@@ -51,6 +51,9 @@ const LABELS: Record<string, Record<Lang, string>> = {
   rollCombat:         { da: 'Kampdata',            en: 'Combat' },
   rollLabel:          { da: 'Rul om:',             en: 'Reroll:' },
 
+  // Purse / wealth
+  purse:              { da: 'FORMUE PÅ PERSON',        en: 'WEALTH ON PERSON' },
+
   // Portrait mode toggle
   portraitOn:         { da: 'Portræt: til',            en: 'Portrait: on' },
   portraitOff:        { da: 'Portræt: fra',            en: 'Portrait: off' },

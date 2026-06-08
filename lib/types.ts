@@ -50,6 +50,7 @@ export interface CharacterTranslations {
     inventoryItem: string
     appearance: string
     howToPlay: string
+    purse: string
   }
   en: {
     species: string
@@ -70,6 +71,7 @@ export interface CharacterTranslations {
     inventoryItem: string
     appearance: string
     howToPlay: string
+    purse: string
   }
 }
 // END INSTANT LANGUAGE SWITCH
@@ -111,6 +113,7 @@ export interface Character {
   // START INSTANT LANGUAGE SWITCH
   translations?: CharacterTranslations
   // END INSTANT LANGUAGE SWITCH
+  purse: string
   adventureHooks: string[]
   createdAt: string
   accentColor: string
